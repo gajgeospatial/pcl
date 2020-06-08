@@ -1,0 +1,1 @@
+This project should be installed as PCL_DIR with ProjectTool.

@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A4BE5258-B2E3-369E-A744-6B098DFCCB50}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>pcl_sample_consensus</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pcl_sample_consensusd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">pcl_sample_consensusd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pcl_sample_consensus</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">pcl_sample_consensus</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\sample_consensus\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;$(ENSENSO_DIR)\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);$(BOOST_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4521;4251;4275;4305;4355</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>
+      </SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR="Debug";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR=\"Debug\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\sample_consensus\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\sample_consensus\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>boost_serialization-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_filesystem-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_date_time-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_iostreams-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_system-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;delayimp.lib;pcl_commond.lib;delayimp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(BOOST_DIR)\stage\$(Platform)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DelayLoadDLLs>VCOMP140D.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)pcl_sample_consensusd.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\sample_consensus\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;$(ENSENSO_DIR)\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);$(BOOST_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4521;4251;4275;4305;4355</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>
+      </SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR="Debug";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR=\"Debug\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\sample_consensus\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\sample_consensus\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>boost_serialization-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_filesystem-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_date_time-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_iostreams-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_system-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;delayimp.lib;pcl_commond.lib;delayimp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(BOOST_DIR)\stage\$(Platform)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DelayLoadDLLs>VCOMP140D.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)pcl_sample_consensusd.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\sample_consensus\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;$(ENSENSO_DIR)\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);$(BOOST_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4800;4521;4251;4275;4305;4355</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>
+      </SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR="Release";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR=\"Release\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\sample_consensus\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\sample_consensus\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>boost_serialization-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_filesystem-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_date_time-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_iostreams-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_system-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;delayimp.lib;pcl_common.lib;delayimp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(BOOST_DIR)\stage\$(Platform)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DelayLoadDLLs>VCOMP140.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)pcl_sample_consensus.lib</ImportLibrary>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\sample_consensus\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;$(ENSENSO_DIR)\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);$(BOOST_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4800;4521;4251;4275;4305;4355</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>
+      </SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR="Release";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR=\"Release\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\sample_consensus\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\sample_consensus\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>boost_serialization-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_filesystem-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_date_time-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_iostreams-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_system-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;delayimp.lib;pcl_common.lib;delayimp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(BOOST_DIR)\stage\$(Platform)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DelayLoadDLLs>VCOMP140.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)pcl_sample_consensus.lib</ImportLibrary>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\sample_consensus\src\sac.cpp" />
+    <ClCompile Include="..\..\sample_consensus\src\sac_model_circle.cpp" />
+    <ClCompile Include="..\..\sample_consensus\src\sac_model_circle3d.cpp" />
+    <ClCompile Include="..\..\sample_consensus\src\sac_model_cylinder.cpp" />
+    <ClCompile Include="..\..\sample_consensus\src\sac_model_cone.cpp" />
+    <ClCompile Include="..\..\sample_consensus\src\sac_model_line.cpp" />
+    <ClCompile Include="..\..\sample_consensus\src\sac_model_parallel_line.cpp" />
+    <ClCompile Include="..\..\sample_consensus\src\sac_model_stick.cpp" />
+    <ClCompile Include="..\..\sample_consensus\src\sac_model_normal_parallel_plane.cpp" />
+    <ClCompile Include="..\..\sample_consensus\src\sac_model_normal_plane.cpp" />
+    <ClCompile Include="..\..\sample_consensus\src\sac_model_normal_sphere.cpp" />
+    <ClCompile Include="..\..\sample_consensus\src\sac_model_plane.cpp" />
+    <ClCompile Include="..\..\sample_consensus\src\sac_model_registration.cpp" />
+    <ClCompile Include="..\..\sample_consensus\src\sac_model_sphere.cpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\boost.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\eigen.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\lmeds.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\method_types.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\mlesac.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\model_types.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\msac.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\ransac.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\rmsac.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\rransac.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\prosac.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\sac.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\sac_model.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\sac_model_circle.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\sac_model_circle3d.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\sac_model_cylinder.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\sac_model_cone.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\sac_model_line.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\sac_model_stick.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\sac_model_normal_parallel_plane.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\sac_model_normal_plane.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\sac_model_normal_sphere.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\sac_model_parallel_line.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\sac_model_parallel_plane.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\sac_model_perpendicular_plane.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\sac_model_plane.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\sac_model_registration.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\sac_model_registration_2d.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\sac_model_sphere.h" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\lmeds.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\mlesac.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\msac.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\ransac.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\rmsac.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\rransac.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\prosac.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\sac_model_circle.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\sac_model_circle3d.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\sac_model_cylinder.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\sac_model_cone.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\sac_model_line.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\sac_model_stick.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\sac_model_normal_parallel_plane.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\sac_model_normal_plane.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\sac_model_normal_sphere.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\sac_model_parallel_line.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\sac_model_parallel_plane.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\sac_model_perpendicular_plane.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\sac_model_plane.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\sac_model_registration.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\sac_model_registration_2d.hpp" />
+    <ClInclude Include="..\..\sample_consensus\include\pcl\sample_consensus\impl\sac_model_sphere.hpp" />
+    <ResourceCompile Include="..\pcl_sample_consensus_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\common\pcl_common.vcxproj">
+      <Project>{7C3AC9E1-AEB3-31AC-80A9-2273E41BDBDB}</Project>
+      <Name>pcl_common</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

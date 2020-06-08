@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CB296FC5-9877-3D30-A2C5-1123688868AA}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>TOOLS_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Development\op3d_active\pcl-1.11.0\msvc\include;C:\Development\op3d_active\pcl-1.11.0\common\include;C:\Development\op3d_active\pcl-1.11.0\io\include;C:\Development\op3d_active\pcl-1.11.0\filters\include;C:\Development\op3d_active\pcl-1.11.0\sample_consensus\include;C:\Development\op3d_active\pcl-1.11.0\segmentation\include;C:\Development\op3d_active\pcl-1.11.0\search\include;C:\Development\op3d_active\pcl-1.11.0\kdtree\include;C:\Development\op3d_active\pcl-1.11.0\features\include;C:\Development\op3d_active\pcl-1.11.0\surface\include;C:\Development\op3d_active\pcl-1.11.0\octree\include;C:\Development\op3d_active\pcl-1.11.0\registration\include;C:\Development\op3d_active\pcl-1.11.0\recognition\include;C:\Development\op3d_active\pcl-1.11.0\geometry\include;C:\Development\op3d_active\pcl-1.11.0\keypoints\include;C:\Development\op3d_active\pcl-1.11.0\ml\include;C:\Development\op3d_active\pcl-1.11.0\visualization\include;C:\Development\op3d_active\pcl-1.11.0\tools\include;C:\Development\op3d_active\eigen-3.3.7;C:\Development\op3d_active\libusb-1.0.24\libusb;C:\Development\op3d_active\OpenNI2-2.2.0.33\Source\Core;C:\Program Files\Ensenso\development\c\include;C:\Development\op3d_active\pcl-1.11.0\recognition\include\pcl\recognition\3rdparty;C:\Development\op3d_active\libpng-1.6.37;C:\Development\3rd_Party\boost_1_67_0\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Development\op3d_active\pcl-1.11.0\msvc\include;C:\Development\op3d_active\pcl-1.11.0\common\include;C:\Development\op3d_active\pcl-1.11.0\io\include;C:\Development\op3d_active\pcl-1.11.0\filters\include;C:\Development\op3d_active\pcl-1.11.0\sample_consensus\include;C:\Development\op3d_active\pcl-1.11.0\segmentation\include;C:\Development\op3d_active\pcl-1.11.0\search\include;C:\Development\op3d_active\pcl-1.11.0\kdtree\include;C:\Development\op3d_active\pcl-1.11.0\features\include;C:\Development\op3d_active\pcl-1.11.0\surface\include;C:\Development\op3d_active\pcl-1.11.0\octree\include;C:\Development\op3d_active\pcl-1.11.0\registration\include;C:\Development\op3d_active\pcl-1.11.0\recognition\include;C:\Development\op3d_active\pcl-1.11.0\geometry\include;C:\Development\op3d_active\pcl-1.11.0\keypoints\include;C:\Development\op3d_active\pcl-1.11.0\ml\include;C:\Development\op3d_active\pcl-1.11.0\visualization\include;C:\Development\op3d_active\pcl-1.11.0\tools\include;C:\Development\op3d_active\eigen-3.3.7;C:\Development\op3d_active\libusb-1.0.24\libusb;C:\Development\op3d_active\OpenNI2-2.2.0.33\Source\Core;C:\Program Files\Ensenso\development\c\include;C:\Development\op3d_active\pcl-1.11.0\recognition\include\pcl\recognition\3rdparty;C:\Development\op3d_active\libpng-1.6.37;C:\Development\3rd_Party\boost_1_67_0\boost;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Development\op3d_active\pcl-1.11.0\msvc\CMakeFiles\17657c9040bbe5f9e539e60d447597e2\TOOLS_BUILD.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Development/op3d_active/pcl-1.11.0/msvc/CMakeFiles/17657c9040bbe5f9e539e60d447597e2/TOOLS_BUILD.rule;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_sac_segmentation_planed.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_plane_projectiond.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_normal_estimationd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_uniform_samplingd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_boundary_estimationd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_cluster_extractiond.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_fpfh_estimationd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_pcd2plyd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_ply2pcdd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_xyz2pcdd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_pclzf2pcdd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_pcd2vtkd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_vfh_estimationd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_spin_estimationd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_voxel_gridd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_passthrough_filterd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_radius_filterd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_extract_featured.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_compute_cloud_errord.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_train_unary_classifierd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_unary_classifier_segmentd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_crf_segmentationd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_add_gaussian_noised.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_outlier_removald.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_mls_smoothingd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_marching_cubes_reconstructiond.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_gp3_surfaced.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_icpd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_icp2dd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_elchd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_lumd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_ndt2dd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_ndt3dd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_pcd_change_viewpointd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_concatenate_points_pcdd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_poisson_reconstructiond.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_train_linemod_templated.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_match_linemod_templated.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_linemod_detectiond.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_fast_bilateral_filterd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_demean_cloudd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_compute_hausdorffd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_morphd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_progressive_morphological_filterd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_generated.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_local_maxd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_grid_mind.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_png2pcdd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_pcd2pngd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_tiff2pcdd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_ply2vtkd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_vtk2plyd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_vtk2objd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_obj2vtkd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_obj2pcdd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_obj2plyd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_vtk2pcdd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_transform_point_cloudd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_transform_from_viewpointd.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Development\op3d_active\pcl-1.11.0\msvc\tools\CMakeFiles\TOOLS_BUILD</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Development/op3d_active/pcl-1.11.0/msvc/CMakeFiles/17657c9040bbe5f9e539e60d447597e2/TOOLS_BUILD.rule;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_sac_segmentation_plane.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_plane_projection.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_normal_estimation.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_uniform_sampling.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_boundary_estimation.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_cluster_extraction.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_fpfh_estimation.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_pcd2ply.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_ply2pcd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_xyz2pcd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_pclzf2pcd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_pcd2vtk.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_vfh_estimation.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_spin_estimation.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_voxel_grid.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_passthrough_filter.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_radius_filter.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_extract_feature.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_compute_cloud_error.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_train_unary_classifier.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_unary_classifier_segment.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_crf_segmentation.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_add_gaussian_noise.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_outlier_removal.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_mls_smoothing.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_marching_cubes_reconstruction.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_gp3_surface.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_icp.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_icp2d.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_elch.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_lum.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_ndt2d.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_ndt3d.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_pcd_change_viewpoint.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_concatenate_points_pcd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_poisson_reconstruction.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_train_linemod_template.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_match_linemod_template.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_linemod_detection.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_fast_bilateral_filter.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_demean_cloud.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_compute_hausdorff.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_morph.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_progressive_morphological_filter.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_generate.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_local_max.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_grid_min.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_png2pcd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_pcd2png.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_tiff2pcd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_ply2vtk.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_vtk2ply.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_vtk2obj.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_obj2vtk.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_obj2pcd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_obj2ply.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_vtk2pcd.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_transform_point_cloud.exe;C:\Development\op3d_active\pcl-1.11.0\msvc\bin\pcl_transform_from_viewpoint.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Development\op3d_active\pcl-1.11.0\msvc\tools\CMakeFiles\TOOLS_BUILD</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Development\op3d_active\pcl-1.11.0\tools\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Development/op3d_active/pcl-1.11.0/tools/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Development/op3d_active/pcl-1.11.0 -BC:/Development/op3d_active/pcl-1.11.0/msvc --check-stamp-file C:/Development/op3d_active/pcl-1.11.0/msvc/tools/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Development/op3d_active/pcl-1.11.0/tools/CMakeLists.txt;C:\Development\op3d_active\pcl-1.11.0\cmake\version.rc.in;C:\Development\op3d_active\pcl-1.11.0\tools\CMakeLists.txt;C:\Development\op3d_active\pcl-1.11.0\tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Development\op3d_active\pcl-1.11.0\msvc\tools\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Development/op3d_active/pcl-1.11.0/tools/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Development/op3d_active/pcl-1.11.0 -BC:/Development/op3d_active/pcl-1.11.0/msvc --check-stamp-file C:/Development/op3d_active/pcl-1.11.0/msvc/tools/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Development/op3d_active/pcl-1.11.0/tools/CMakeLists.txt;C:\Development\op3d_active\pcl-1.11.0\cmake\version.rc.in;C:\Development\op3d_active\pcl-1.11.0\tools\CMakeLists.txt;C:\Development\op3d_active\pcl-1.11.0\tools\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Development\op3d_active\pcl-1.11.0\msvc\tools\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\CMakeFiles\TOOLS_BUILD" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_add_gaussian_noise.vcxproj">
+      <Project>{3413333B-0F25-39DB-BB93-53EFB3F1CAC9}</Project>
+      <Name>pcl_add_gaussian_noise</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_boundary_estimation.vcxproj">
+      <Project>{DD3F6064-BA9F-3ECE-A9A7-CEF9AE6CEB66}</Project>
+      <Name>pcl_boundary_estimation</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_cluster_extraction.vcxproj">
+      <Project>{1EC4BA90-D535-3171-98A6-F7BA995EBCFB}</Project>
+      <Name>pcl_cluster_extraction</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_compute_cloud_error.vcxproj">
+      <Project>{8F070A6F-1C80-32DE-BAD6-5E896CBE8EA5}</Project>
+      <Name>pcl_compute_cloud_error</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_compute_hausdorff.vcxproj">
+      <Project>{90B84DB3-50B5-375A-9629-FA82BEF9AB75}</Project>
+      <Name>pcl_compute_hausdorff</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_concatenate_points_pcd.vcxproj">
+      <Project>{D870BF8F-6110-3C0F-8B94-CD28D1C56440}</Project>
+      <Name>pcl_concatenate_points_pcd</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_crf_segmentation.vcxproj">
+      <Project>{4F922E7C-5EFE-39DA-B684-364638ABA9E9}</Project>
+      <Name>pcl_crf_segmentation</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_demean_cloud.vcxproj">
+      <Project>{13DA595E-F5E0-3619-9EBD-0B05D173C24E}</Project>
+      <Name>pcl_demean_cloud</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_elch.vcxproj">
+      <Project>{FA4F0842-5540-36D1-832B-9C5645CDABBE}</Project>
+      <Name>pcl_elch</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_extract_feature.vcxproj">
+      <Project>{E14FBCBB-747B-37D4-8F00-59BA0A67C99E}</Project>
+      <Name>pcl_extract_feature</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_fast_bilateral_filter.vcxproj">
+      <Project>{A342FFD5-940A-3081-8D14-11CC06A81938}</Project>
+      <Name>pcl_fast_bilateral_filter</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_fpfh_estimation.vcxproj">
+      <Project>{B8BFEEE7-D82B-3046-A768-5494E8CF79CF}</Project>
+      <Name>pcl_fpfh_estimation</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_generate.vcxproj">
+      <Project>{E7A9361C-4C8C-39C4-A593-68A3B349CF10}</Project>
+      <Name>pcl_generate</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_gp3_surface.vcxproj">
+      <Project>{36464531-1676-3379-B377-2C535130C2C4}</Project>
+      <Name>pcl_gp3_surface</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_grid_min.vcxproj">
+      <Project>{F9FD20A0-726C-3E6A-9248-CC2E2418B1BB}</Project>
+      <Name>pcl_grid_min</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_icp.vcxproj">
+      <Project>{4D081919-6D8F-338E-B74C-867A1A1C89EB}</Project>
+      <Name>pcl_icp</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_icp2d.vcxproj">
+      <Project>{D55609B2-5C5F-30DB-A6F4-578A1584B093}</Project>
+      <Name>pcl_icp2d</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_linemod_detection.vcxproj">
+      <Project>{19A3B848-379C-3267-A8BF-E7EEF9032739}</Project>
+      <Name>pcl_linemod_detection</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_local_max.vcxproj">
+      <Project>{9E3F7AEB-2975-374B-AC9A-1D02A1B8FFB9}</Project>
+      <Name>pcl_local_max</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_lum.vcxproj">
+      <Project>{D3D5524F-37E9-3892-8608-3F5AD6B05D6E}</Project>
+      <Name>pcl_lum</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_marching_cubes_reconstruction.vcxproj">
+      <Project>{1B85B8C1-FEC0-3BE9-A1AC-921E09F73C42}</Project>
+      <Name>pcl_marching_cubes_reconstruction</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_match_linemod_template.vcxproj">
+      <Project>{C603715A-B91F-3BBB-B8F2-CC1C92B7AFCF}</Project>
+      <Name>pcl_match_linemod_template</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_mls_smoothing.vcxproj">
+      <Project>{727AB255-2C60-3CCC-B054-62875523ACB4}</Project>
+      <Name>pcl_mls_smoothing</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_morph.vcxproj">
+      <Project>{EEE04D48-1D0E-37AB-8F26-BC2ADC371F64}</Project>
+      <Name>pcl_morph</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_ndt2d.vcxproj">
+      <Project>{713830BE-86F7-35B1-9710-6005EC5FD9E2}</Project>
+      <Name>pcl_ndt2d</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_ndt3d.vcxproj">
+      <Project>{16C508C8-C33E-3CEB-BE47-318B28781AA0}</Project>
+      <Name>pcl_ndt3d</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_normal_estimation.vcxproj">
+      <Project>{9B1E286E-1F8F-324F-8AF2-64FF827F9713}</Project>
+      <Name>pcl_normal_estimation</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_obj2pcd.vcxproj">
+      <Project>{E5504FB4-0F3C-3E41-A705-4F47DF52065A}</Project>
+      <Name>pcl_obj2pcd</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_obj2ply.vcxproj">
+      <Project>{E246CDCD-B46F-388E-AE36-64C421ADD60B}</Project>
+      <Name>pcl_obj2ply</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_obj2vtk.vcxproj">
+      <Project>{28D3A19A-CFF7-3637-8996-A9E3DAA7D006}</Project>
+      <Name>pcl_obj2vtk</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_outlier_removal.vcxproj">
+      <Project>{680836D7-EB6F-3B39-9AD1-47E829E4CD69}</Project>
+      <Name>pcl_outlier_removal</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_passthrough_filter.vcxproj">
+      <Project>{83AB40FA-E816-320A-8F21-F2A95CCD6291}</Project>
+      <Name>pcl_passthrough_filter</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_pcd2ply.vcxproj">
+      <Project>{12AA76A8-EFBB-36DA-9282-8A80640C733D}</Project>
+      <Name>pcl_pcd2ply</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_pcd2png.vcxproj">
+      <Project>{9BCD1335-78E3-35E1-AABA-227592EF84D7}</Project>
+      <Name>pcl_pcd2png</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_pcd2vtk.vcxproj">
+      <Project>{0828E968-E68D-3E40-A7D3-4ECB59E07CF8}</Project>
+      <Name>pcl_pcd2vtk</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_pcd_change_viewpoint.vcxproj">
+      <Project>{D1566335-AB5D-34FA-8977-E405655F5324}</Project>
+      <Name>pcl_pcd_change_viewpoint</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_pclzf2pcd.vcxproj">
+      <Project>{0E4E878C-088B-366D-A06A-5CD42CAC6982}</Project>
+      <Name>pcl_pclzf2pcd</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_plane_projection.vcxproj">
+      <Project>{92B59C20-4FB0-315D-8E83-2EEEADF80DBE}</Project>
+      <Name>pcl_plane_projection</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_ply2pcd.vcxproj">
+      <Project>{47F92041-9D9A-3984-95FE-65DCA2935320}</Project>
+      <Name>pcl_ply2pcd</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_ply2vtk.vcxproj">
+      <Project>{42C07094-8798-34F8-BFD8-B77BA3EC1DD2}</Project>
+      <Name>pcl_ply2vtk</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_png2pcd.vcxproj">
+      <Project>{FCBFE967-42E0-33DB-97DF-B85B7BB52E84}</Project>
+      <Name>pcl_png2pcd</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_poisson_reconstruction.vcxproj">
+      <Project>{A4805695-F04F-3249-BFBB-39BC7C5D1BB2}</Project>
+      <Name>pcl_poisson_reconstruction</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_progressive_morphological_filter.vcxproj">
+      <Project>{5C819C29-893D-36EE-8C01-99DB2FDBB800}</Project>
+      <Name>pcl_progressive_morphological_filter</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_radius_filter.vcxproj">
+      <Project>{05CCE63B-A7ED-3E7B-A164-FCF417C5A996}</Project>
+      <Name>pcl_radius_filter</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_sac_segmentation_plane.vcxproj">
+      <Project>{51ECBB08-7315-3288-9BCF-0C2B795C1FA4}</Project>
+      <Name>pcl_sac_segmentation_plane</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_spin_estimation.vcxproj">
+      <Project>{78E50532-9C3E-3A23-8CAC-54F75F89D943}</Project>
+      <Name>pcl_spin_estimation</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_tiff2pcd.vcxproj">
+      <Project>{02EAD908-22ED-3FA8-9DEA-58A115B8B6AB}</Project>
+      <Name>pcl_tiff2pcd</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_train_linemod_template.vcxproj">
+      <Project>{BFC66F21-C1FB-3ACD-8C9F-B02A359683C2}</Project>
+      <Name>pcl_train_linemod_template</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_train_unary_classifier.vcxproj">
+      <Project>{0F6A1780-7A2A-3FEE-AD80-2CDF825BC59A}</Project>
+      <Name>pcl_train_unary_classifier</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_transform_from_viewpoint.vcxproj">
+      <Project>{C95ECCE5-B309-3DB0-888E-645B58CEBFAA}</Project>
+      <Name>pcl_transform_from_viewpoint</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_transform_point_cloud.vcxproj">
+      <Project>{BCE2C027-7E0C-3CC9-B6F4-724979355043}</Project>
+      <Name>pcl_transform_point_cloud</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_unary_classifier_segment.vcxproj">
+      <Project>{FF7D1E65-7A10-3E96-8130-0D550CA92588}</Project>
+      <Name>pcl_unary_classifier_segment</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_uniform_sampling.vcxproj">
+      <Project>{57CA7094-6045-3087-9FB9-0C26F94F1CC5}</Project>
+      <Name>pcl_uniform_sampling</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_vfh_estimation.vcxproj">
+      <Project>{C46883FD-24D8-3784-81CC-E7286DC9774E}</Project>
+      <Name>pcl_vfh_estimation</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_voxel_grid.vcxproj">
+      <Project>{BE77A728-46A2-3339-AC3C-9A1B626B6A07}</Project>
+      <Name>pcl_voxel_grid</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_vtk2obj.vcxproj">
+      <Project>{71459D5C-8E1D-3217-B4F9-661E837E6BDD}</Project>
+      <Name>pcl_vtk2obj</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_vtk2pcd.vcxproj">
+      <Project>{200C756A-0EC8-30AA-A487-786861C1429A}</Project>
+      <Name>pcl_vtk2pcd</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_vtk2ply.vcxproj">
+      <Project>{0A2721ED-D607-3D69-BFC9-93C564C9BDB2}</Project>
+      <Name>pcl_vtk2ply</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\pcl-1.11.0\msvc\tools\pcl_xyz2pcd.vcxproj">
+      <Project>{BC95E567-EDEC-3DBC-9E15-F714D9D2F45C}</Project>
+      <Name>pcl_xyz2pcd</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

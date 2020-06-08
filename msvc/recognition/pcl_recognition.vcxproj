@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F4736154-5AD6-3E85-8417-8F6870E4E533}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>pcl_recognition</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pcl_recognitiond</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">pcl_recognitiond</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pcl_recognition</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">pcl_recognition</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\io\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\features\include;..\..\filters\include;..\..\registration\include;..\..\sample_consensus\include;..\..\ml\include;..\..\recognition\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;$(ENSENSO_DIR)\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);$(BOOST_DIR);..\..\..\$(FLANN_DIR)\src\cpp;..\..\..\$(VTK_DIR)\msvc\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\msvc\Common\Core;..\..\..\$(VTK_DIR)\Common\Core;..\..\..\$(VTK_DIR)\msvc\Utilities\KWIML;..\..\..\$(VTK_DIR)\Utilities\KWIML;..\..\..\$(VTK_DIR)\msvc\Utilities\KWSys;..\..\..\$(VTK_DIR)\Utilities\KWSys;..\..\..\$(VTK_DIR)\msvc\Common\DataModel;..\..\..\$(VTK_DIR)\Common\DataModel;..\..\..\$(VTK_DIR)\msvc\Common\Math;..\..\..\$(VTK_DIR)\Common\Math;..\..\..\$(VTK_DIR)\msvc\Common\Transforms;..\..\..\$(VTK_DIR)\Common\Transforms;..\..\..\$(VTK_DIR)\msvc\Rendering\Core;..\..\..\$(VTK_DIR)\Rendering\Core;..\..\..\$(VTK_DIR)\msvc\Common\ExecutionModel;..\..\..\$(VTK_DIR)\Common\ExecutionModel;..\..\..\$(VTK_DIR)\msvc\Filters\Core;..\..\..\$(VTK_DIR)\Filters\Core;..\..\..\$(VTK_DIR)\msvc\Common\Misc;..\..\..\$(VTK_DIR)\Common\Misc;..\..\..\$(VTK_DIR)\msvc\Rendering\UI;..\..\..\$(VTK_DIR)\Rendering\UI;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew;..\..\..\$(VTK_DIR)\ThirdParty\glew;..\..\..\$(VTK_DIR)\msvc\Charts\Core;..\..\..\$(VTK_DIR)\Charts\Core;..\..\..\$(VTK_DIR)\msvc\Filters\General;..\..\..\$(VTK_DIR)\Filters\General;..\..\..\$(VTK_DIR)\msvc\Rendering\Context2D;..\..\..\$(VTK_DIR)\Rendering\Context2D;..\..\..\$(VTK_DIR)\msvc\Filters\Extraction;..\..\..\$(VTK_DIR)\Filters\Extraction;..\..\..\$(VTK_DIR)\msvc\Filters\Modeling;..\..\..\$(VTK_DIR)\Filters\Modeling;..\..\..\$(VTK_DIR)\msvc\Imaging\Core;..\..\..\$(VTK_DIR)\Imaging\Core;..\..\..\$(VTK_DIR)\msvc\Imaging\Sources;..\..\..\$(VTK_DIR)\Imaging\Sources;..\..\..\$(VTK_DIR)\msvc\Interaction\Style;..\..\..\$(VTK_DIR)\Interaction\Style;..\..\..\$(VTK_DIR)\msvc\Interaction\Widgets;..\..\..\$(VTK_DIR)\Interaction\Widgets;..\..\..\$(VTK_DIR)\msvc\Filters\Sources;..\..\..\$(VTK_DIR)\Filters\Sources;..\..\..\$(VTK_DIR)\msvc\IO\Core;..\..\..\$(VTK_DIR)\IO\Core;..\..\..\$(VTK_DIR)\msvc\IO\Geometry;..\..\..\$(VTK_DIR)\IO\Geometry;..\..\..\$(VTK_DIR)\msvc\IO\Legacy;..\..\..\$(VTK_DIR)\IO\Legacy;..\..\..\$(VTK_DIR)\msvc\IO\Image;..\..\..\$(VTK_DIR)\IO\Image;..\..\..\$(VTK_DIR)\msvc\IO\PLY;..\..\..\$(VTK_DIR)\IO\PLY;..\..\..\$(VTK_DIR)\msvc\Rendering\Annotation;..\..\..\$(VTK_DIR)\Rendering\Annotation;..\..\..\$(VTK_DIR)\msvc\Rendering\LOD;..\..\..\$(VTK_DIR)\Rendering\LOD;..\..\..\$(VTK_DIR)\msvc\Views\Context2D;..\..\..\$(VTK_DIR)\Views\Context2D;..\..\..\$(VTK_DIR)\msvc\Views\Core;..\..\..\$(VTK_DIR)\Views\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4521;4251;4275;4305;4355</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>
+      </SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR="Debug";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR=\"Debug\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\io\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\features\include;..\..\filters\include;..\..\registration\include;..\..\sample_consensus\include;..\..\ml\include;..\..\recognition\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;..\..\..\$(FLANN_DIR)\src\cpp;..\..\..\$(VTK_DIR)\msvc\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\msvc\Common\Core;..\..\..\$(VTK_DIR)\Common\Core;..\..\..\$(VTK_DIR)\msvc\Utilities\KWIML;..\..\..\$(VTK_DIR)\Utilities\KWIML;..\..\..\$(VTK_DIR)\msvc\Utilities\KWSys;..\..\..\$(VTK_DIR)\Utilities\KWSys;..\..\..\$(VTK_DIR)\msvc\Common\DataModel;..\..\..\$(VTK_DIR)\Common\DataModel;..\..\..\$(VTK_DIR)\msvc\Common\Math;..\..\..\$(VTK_DIR)\Common\Math;..\..\..\$(VTK_DIR)\msvc\Common\Transforms;..\..\..\$(VTK_DIR)\Common\Transforms;..\..\..\$(VTK_DIR)\msvc\Rendering\Core;..\..\..\$(VTK_DIR)\Rendering\Core;..\..\..\$(VTK_DIR)\msvc\Common\ExecutionModel;..\..\..\$(VTK_DIR)\Common\ExecutionModel;..\..\..\$(VTK_DIR)\msvc\Filters\Core;..\..\..\$(VTK_DIR)\Filters\Core;..\..\..\$(VTK_DIR)\msvc\Common\Misc;..\..\..\$(VTK_DIR)\Common\Misc;..\..\..\$(VTK_DIR)\msvc\Rendering\UI;..\..\..\$(VTK_DIR)\Rendering\UI;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew;..\..\..\$(VTK_DIR)\ThirdParty\glew;..\..\..\$(VTK_DIR)\msvc\Charts\Core;..\..\..\$(VTK_DIR)\Charts\Core;..\..\..\$(VTK_DIR)\msvc\Filters\General;..\..\..\$(VTK_DIR)\Filters\General;..\..\..\$(VTK_DIR)\msvc\Rendering\Context2D;..\..\..\$(VTK_DIR)\Rendering\Context2D;..\..\..\$(VTK_DIR)\msvc\Filters\Extraction;..\..\..\$(VTK_DIR)\Filters\Extraction;..\..\..\$(VTK_DIR)\msvc\Filters\Modeling;..\..\..\$(VTK_DIR)\Filters\Modeling;..\..\..\$(VTK_DIR)\msvc\Imaging\Core;..\..\..\$(VTK_DIR)\Imaging\Core;..\..\..\$(VTK_DIR)\msvc\Imaging\Sources;..\..\..\$(VTK_DIR)\Imaging\Sources;..\..\..\$(VTK_DIR)\msvc\Interaction\Style;..\..\..\$(VTK_DIR)\Interaction\Style;..\..\..\$(VTK_DIR)\msvc\Interaction\Widgets;..\..\..\$(VTK_DIR)\Interaction\Widgets;..\..\..\$(VTK_DIR)\msvc\Filters\Sources;..\..\..\$(VTK_DIR)\Filters\Sources;..\..\..\$(VTK_DIR)\msvc\IO\Core;..\..\..\$(VTK_DIR)\IO\Core;..\..\..\$(VTK_DIR)\msvc\IO\Geometry;..\..\..\$(VTK_DIR)\IO\Geometry;..\..\..\$(VTK_DIR)\msvc\IO\Legacy;..\..\..\$(VTK_DIR)\IO\Legacy;..\..\..\$(VTK_DIR)\msvc\IO\Image;..\..\..\$(VTK_DIR)\IO\Image;..\..\..\$(VTK_DIR)\msvc\IO\PLY;..\..\..\$(VTK_DIR)\IO\PLY;..\..\..\$(VTK_DIR)\msvc\Rendering\Annotation;..\..\..\$(VTK_DIR)\Rendering\Annotation;..\..\..\$(VTK_DIR)\msvc\Rendering\LOD;..\..\..\$(VTK_DIR)\Rendering\LOD;..\..\..\$(VTK_DIR)\msvc\Views\Context2D;..\..\..\$(VTK_DIR)\Views\Context2D;..\..\..\$(VTK_DIR)\msvc\Views\Core;..\..\..\$(VTK_DIR)\Views\Core;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\io\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\features\include;..\..\filters\include;..\..\registration\include;..\..\sample_consensus\include;..\..\ml\include;..\..\recognition\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;..\..\..\$(FLANN_DIR)\src\cpp;..\..\..\$(VTK_DIR)\msvc\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\msvc\Common\Core;..\..\..\$(VTK_DIR)\Common\Core;..\..\..\$(VTK_DIR)\msvc\Utilities\KWIML;..\..\..\$(VTK_DIR)\Utilities\KWIML;..\..\..\$(VTK_DIR)\msvc\Utilities\KWSys;..\..\..\$(VTK_DIR)\Utilities\KWSys;..\..\..\$(VTK_DIR)\msvc\Common\DataModel;..\..\..\$(VTK_DIR)\Common\DataModel;..\..\..\$(VTK_DIR)\msvc\Common\Math;..\..\..\$(VTK_DIR)\Common\Math;..\..\..\$(VTK_DIR)\msvc\Common\Transforms;..\..\..\$(VTK_DIR)\Common\Transforms;..\..\..\$(VTK_DIR)\msvc\Rendering\Core;..\..\..\$(VTK_DIR)\Rendering\Core;..\..\..\$(VTK_DIR)\msvc\Common\ExecutionModel;..\..\..\$(VTK_DIR)\Common\ExecutionModel;..\..\..\$(VTK_DIR)\msvc\Filters\Core;..\..\..\$(VTK_DIR)\Filters\Core;..\..\..\$(VTK_DIR)\msvc\Common\Misc;..\..\..\$(VTK_DIR)\Common\Misc;..\..\..\$(VTK_DIR)\msvc\Rendering\UI;..\..\..\$(VTK_DIR)\Rendering\UI;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew;..\..\..\$(VTK_DIR)\ThirdParty\glew;..\..\..\$(VTK_DIR)\msvc\Charts\Core;..\..\..\$(VTK_DIR)\Charts\Core;..\..\..\$(VTK_DIR)\msvc\Filters\General;..\..\..\$(VTK_DIR)\Filters\General;..\..\..\$(VTK_DIR)\msvc\Rendering\Context2D;..\..\..\$(VTK_DIR)\Rendering\Context2D;..\..\..\$(VTK_DIR)\msvc\Filters\Extraction;..\..\..\$(VTK_DIR)\Filters\Extraction;..\..\..\$(VTK_DIR)\msvc\Filters\Modeling;..\..\..\$(VTK_DIR)\Filters\Modeling;..\..\..\$(VTK_DIR)\msvc\Imaging\Core;..\..\..\$(VTK_DIR)\Imaging\Core;..\..\..\$(VTK_DIR)\msvc\Imaging\Sources;..\..\..\$(VTK_DIR)\Imaging\Sources;..\..\..\$(VTK_DIR)\msvc\Interaction\Style;..\..\..\$(VTK_DIR)\Interaction\Style;..\..\..\$(VTK_DIR)\msvc\Interaction\Widgets;..\..\..\$(VTK_DIR)\Interaction\Widgets;..\..\..\$(VTK_DIR)\msvc\Filters\Sources;..\..\..\$(VTK_DIR)\Filters\Sources;..\..\..\$(VTK_DIR)\msvc\IO\Core;..\..\..\$(VTK_DIR)\IO\Core;..\..\..\$(VTK_DIR)\msvc\IO\Geometry;..\..\..\$(VTK_DIR)\IO\Geometry;..\..\..\$(VTK_DIR)\msvc\IO\Legacy;..\..\..\$(VTK_DIR)\IO\Legacy;..\..\..\$(VTK_DIR)\msvc\IO\Image;..\..\..\$(VTK_DIR)\IO\Image;..\..\..\$(VTK_DIR)\msvc\IO\PLY;..\..\..\$(VTK_DIR)\IO\PLY;..\..\..\$(VTK_DIR)\msvc\Rendering\Annotation;..\..\..\$(VTK_DIR)\Rendering\Annotation;..\..\..\$(VTK_DIR)\msvc\Rendering\LOD;..\..\..\$(VTK_DIR)\Rendering\LOD;..\..\..\$(VTK_DIR)\msvc\Views\Context2D;..\..\..\$(VTK_DIR)\Views\Context2D;..\..\..\$(VTK_DIR)\msvc\Views\Core;..\..\..\$(VTK_DIR)\Views\Core;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>boost_serialization-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_filesystem-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_date_time-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_iostreams-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_system-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;delayimp.lib;pcl_registrationd.lib;pcl_mld.lib;pcl_iod.lib;pcl_featuresd.lib;pcl_filtersd.lib;pcl_searchd.lib;pcl_kdtreed.lib;pcl_octreed.lib;flann.lib;pcl_sample_consensusd.lib;pcl_commond.lib;pcl_io_plyd.lib;delayimp.lib;vtkRenderingOpenGL2-9.0d.lib;vtkglew-9.0d.lib;opengl32.lib;vtkChartsCore-9.0d.lib;vtkIOGeometry-9.0d.lib;vtkIOPLY-9.0d.lib;vtkRenderingLOD-9.0d.lib;vtkViewsContext2D-9.0d.lib;vtkRenderingContext2D-9.0d.lib;vtkViewsCore-9.0d.lib;vtkInteractionWidgets-9.0d.lib;vtkFiltersModeling-9.0d.lib;vtkInteractionStyle-9.0d.lib;vtkFiltersExtraction-9.0d.lib;vtkIOLegacy-9.0d.lib;vtkIOCore-9.0d.lib;vtkRenderingAnnotation-9.0d.lib;vtkImagingSources-9.0d.lib;vtkIOImage-9.0d.lib;vtkImagingCore-9.0d.lib;vtkRenderingUI-9.0d.lib;vtkRenderingCore-9.0d.lib;vtkFiltersSources-9.0d.lib;vtkFiltersGeneral-9.0d.lib;vtkFiltersCore-9.0d.lib;vtkCommonExecutionModel-9.0d.lib;vtkCommonDataModel-9.0d.lib;vtkCommonTransforms-9.0d.lib;vtkCommonMisc-9.0d.lib;vtkCommonMath-9.0d.lib;vtkCommonCore-9.0d.lib;vtksys-9.0d.lib;ws2_32.lib;dbghelp.lib;psapi.lib;libpng14.lib;libusb-1.0.lib;OpenNI2.lib;nxLib64.lib;wpcap.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(FLANN_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(VTK_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(PNG_DIR)\projects\vstudio\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(LIBUSB_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(OPENNI2_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(WINCAP_DIR)\wpcap\PRJ\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(BOOST_DIR)\stage\$(Platform)\lib;$(ENSENSO_DIR)\c\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DelayLoadDLLs>VCOMP140D.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)pcl_recognitiond.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\io\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\features\include;..\..\filters\include;..\..\registration\include;..\..\sample_consensus\include;..\..\ml\include;..\..\recognition\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;$(ENSENSO_DIR)\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);$(BOOST_DIR);..\..\..\$(FLANN_DIR)\src\cpp;..\..\..\$(VTK_DIR)\msvc\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\msvc\Common\Core;..\..\..\$(VTK_DIR)\Common\Core;..\..\..\$(VTK_DIR)\msvc\Utilities\KWIML;..\..\..\$(VTK_DIR)\Utilities\KWIML;..\..\..\$(VTK_DIR)\msvc\Utilities\KWSys;..\..\..\$(VTK_DIR)\Utilities\KWSys;..\..\..\$(VTK_DIR)\msvc\Common\DataModel;..\..\..\$(VTK_DIR)\Common\DataModel;..\..\..\$(VTK_DIR)\msvc\Common\Math;..\..\..\$(VTK_DIR)\Common\Math;..\..\..\$(VTK_DIR)\msvc\Common\Transforms;..\..\..\$(VTK_DIR)\Common\Transforms;..\..\..\$(VTK_DIR)\msvc\Rendering\Core;..\..\..\$(VTK_DIR)\Rendering\Core;..\..\..\$(VTK_DIR)\msvc\Common\ExecutionModel;..\..\..\$(VTK_DIR)\Common\ExecutionModel;..\..\..\$(VTK_DIR)\msvc\Filters\Core;..\..\..\$(VTK_DIR)\Filters\Core;..\..\..\$(VTK_DIR)\msvc\Common\Misc;..\..\..\$(VTK_DIR)\Common\Misc;..\..\..\$(VTK_DIR)\msvc\Rendering\UI;..\..\..\$(VTK_DIR)\Rendering\UI;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew;..\..\..\$(VTK_DIR)\ThirdParty\glew;..\..\..\$(VTK_DIR)\msvc\Charts\Core;..\..\..\$(VTK_DIR)\Charts\Core;..\..\..\$(VTK_DIR)\msvc\Filters\General;..\..\..\$(VTK_DIR)\Filters\General;..\..\..\$(VTK_DIR)\msvc\Rendering\Context2D;..\..\..\$(VTK_DIR)\Rendering\Context2D;..\..\..\$(VTK_DIR)\msvc\Filters\Extraction;..\..\..\$(VTK_DIR)\Filters\Extraction;..\..\..\$(VTK_DIR)\msvc\Filters\Modeling;..\..\..\$(VTK_DIR)\Filters\Modeling;..\..\..\$(VTK_DIR)\msvc\Imaging\Core;..\..\..\$(VTK_DIR)\Imaging\Core;..\..\..\$(VTK_DIR)\msvc\Imaging\Sources;..\..\..\$(VTK_DIR)\Imaging\Sources;..\..\..\$(VTK_DIR)\msvc\Interaction\Style;..\..\..\$(VTK_DIR)\Interaction\Style;..\..\..\$(VTK_DIR)\msvc\Interaction\Widgets;..\..\..\$(VTK_DIR)\Interaction\Widgets;..\..\..\$(VTK_DIR)\msvc\Filters\Sources;..\..\..\$(VTK_DIR)\Filters\Sources;..\..\..\$(VTK_DIR)\msvc\IO\Core;..\..\..\$(VTK_DIR)\IO\Core;..\..\..\$(VTK_DIR)\msvc\IO\Geometry;..\..\..\$(VTK_DIR)\IO\Geometry;..\..\..\$(VTK_DIR)\msvc\IO\Legacy;..\..\..\$(VTK_DIR)\IO\Legacy;..\..\..\$(VTK_DIR)\msvc\IO\Image;..\..\..\$(VTK_DIR)\IO\Image;..\..\..\$(VTK_DIR)\msvc\IO\PLY;..\..\..\$(VTK_DIR)\IO\PLY;..\..\..\$(VTK_DIR)\msvc\Rendering\Annotation;..\..\..\$(VTK_DIR)\Rendering\Annotation;..\..\..\$(VTK_DIR)\msvc\Rendering\LOD;..\..\..\$(VTK_DIR)\Rendering\LOD;..\..\..\$(VTK_DIR)\msvc\Views\Context2D;..\..\..\$(VTK_DIR)\Views\Context2D;..\..\..\$(VTK_DIR)\msvc\Views\Core;..\..\..\$(VTK_DIR)\Views\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4521;4251;4275;4305;4355</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>
+      </SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR="Debug";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR=\"Debug\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\io\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\features\include;..\..\filters\include;..\..\registration\include;..\..\sample_consensus\include;..\..\ml\include;..\..\recognition\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;..\..\..\$(FLANN_DIR)\src\cpp;..\..\..\$(VTK_DIR)\msvc\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\msvc\Common\Core;..\..\..\$(VTK_DIR)\Common\Core;..\..\..\$(VTK_DIR)\msvc\Utilities\KWIML;..\..\..\$(VTK_DIR)\Utilities\KWIML;..\..\..\$(VTK_DIR)\msvc\Utilities\KWSys;..\..\..\$(VTK_DIR)\Utilities\KWSys;..\..\..\$(VTK_DIR)\msvc\Common\DataModel;..\..\..\$(VTK_DIR)\Common\DataModel;..\..\..\$(VTK_DIR)\msvc\Common\Math;..\..\..\$(VTK_DIR)\Common\Math;..\..\..\$(VTK_DIR)\msvc\Common\Transforms;..\..\..\$(VTK_DIR)\Common\Transforms;..\..\..\$(VTK_DIR)\msvc\Rendering\Core;..\..\..\$(VTK_DIR)\Rendering\Core;..\..\..\$(VTK_DIR)\msvc\Common\ExecutionModel;..\..\..\$(VTK_DIR)\Common\ExecutionModel;..\..\..\$(VTK_DIR)\msvc\Filters\Core;..\..\..\$(VTK_DIR)\Filters\Core;..\..\..\$(VTK_DIR)\msvc\Common\Misc;..\..\..\$(VTK_DIR)\Common\Misc;..\..\..\$(VTK_DIR)\msvc\Rendering\UI;..\..\..\$(VTK_DIR)\Rendering\UI;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew;..\..\..\$(VTK_DIR)\ThirdParty\glew;..\..\..\$(VTK_DIR)\msvc\Charts\Core;..\..\..\$(VTK_DIR)\Charts\Core;..\..\..\$(VTK_DIR)\msvc\Filters\General;..\..\..\$(VTK_DIR)\Filters\General;..\..\..\$(VTK_DIR)\msvc\Rendering\Context2D;..\..\..\$(VTK_DIR)\Rendering\Context2D;..\..\..\$(VTK_DIR)\msvc\Filters\Extraction;..\..\..\$(VTK_DIR)\Filters\Extraction;..\..\..\$(VTK_DIR)\msvc\Filters\Modeling;..\..\..\$(VTK_DIR)\Filters\Modeling;..\..\..\$(VTK_DIR)\msvc\Imaging\Core;..\..\..\$(VTK_DIR)\Imaging\Core;..\..\..\$(VTK_DIR)\msvc\Imaging\Sources;..\..\..\$(VTK_DIR)\Imaging\Sources;..\..\..\$(VTK_DIR)\msvc\Interaction\Style;..\..\..\$(VTK_DIR)\Interaction\Style;..\..\..\$(VTK_DIR)\msvc\Interaction\Widgets;..\..\..\$(VTK_DIR)\Interaction\Widgets;..\..\..\$(VTK_DIR)\msvc\Filters\Sources;..\..\..\$(VTK_DIR)\Filters\Sources;..\..\..\$(VTK_DIR)\msvc\IO\Core;..\..\..\$(VTK_DIR)\IO\Core;..\..\..\$(VTK_DIR)\msvc\IO\Geometry;..\..\..\$(VTK_DIR)\IO\Geometry;..\..\..\$(VTK_DIR)\msvc\IO\Legacy;..\..\..\$(VTK_DIR)\IO\Legacy;..\..\..\$(VTK_DIR)\msvc\IO\Image;..\..\..\$(VTK_DIR)\IO\Image;..\..\..\$(VTK_DIR)\msvc\IO\PLY;..\..\..\$(VTK_DIR)\IO\PLY;..\..\..\$(VTK_DIR)\msvc\Rendering\Annotation;..\..\..\$(VTK_DIR)\Rendering\Annotation;..\..\..\$(VTK_DIR)\msvc\Rendering\LOD;..\..\..\$(VTK_DIR)\Rendering\LOD;..\..\..\$(VTK_DIR)\msvc\Views\Context2D;..\..\..\$(VTK_DIR)\Views\Context2D;..\..\..\$(VTK_DIR)\msvc\Views\Core;..\..\..\$(VTK_DIR)\Views\Core;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\io\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\features\include;..\..\filters\include;..\..\registration\include;..\..\sample_consensus\include;..\..\ml\include;..\..\recognition\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;..\..\..\$(FLANN_DIR)\src\cpp;..\..\..\$(VTK_DIR)\msvc\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\msvc\Common\Core;..\..\..\$(VTK_DIR)\Common\Core;..\..\..\$(VTK_DIR)\msvc\Utilities\KWIML;..\..\..\$(VTK_DIR)\Utilities\KWIML;..\..\..\$(VTK_DIR)\msvc\Utilities\KWSys;..\..\..\$(VTK_DIR)\Utilities\KWSys;..\..\..\$(VTK_DIR)\msvc\Common\DataModel;..\..\..\$(VTK_DIR)\Common\DataModel;..\..\..\$(VTK_DIR)\msvc\Common\Math;..\..\..\$(VTK_DIR)\Common\Math;..\..\..\$(VTK_DIR)\msvc\Common\Transforms;..\..\..\$(VTK_DIR)\Common\Transforms;..\..\..\$(VTK_DIR)\msvc\Rendering\Core;..\..\..\$(VTK_DIR)\Rendering\Core;..\..\..\$(VTK_DIR)\msvc\Common\ExecutionModel;..\..\..\$(VTK_DIR)\Common\ExecutionModel;..\..\..\$(VTK_DIR)\msvc\Filters\Core;..\..\..\$(VTK_DIR)\Filters\Core;..\..\..\$(VTK_DIR)\msvc\Common\Misc;..\..\..\$(VTK_DIR)\Common\Misc;..\..\..\$(VTK_DIR)\msvc\Rendering\UI;..\..\..\$(VTK_DIR)\Rendering\UI;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew;..\..\..\$(VTK_DIR)\ThirdParty\glew;..\..\..\$(VTK_DIR)\msvc\Charts\Core;..\..\..\$(VTK_DIR)\Charts\Core;..\..\..\$(VTK_DIR)\msvc\Filters\General;..\..\..\$(VTK_DIR)\Filters\General;..\..\..\$(VTK_DIR)\msvc\Rendering\Context2D;..\..\..\$(VTK_DIR)\Rendering\Context2D;..\..\..\$(VTK_DIR)\msvc\Filters\Extraction;..\..\..\$(VTK_DIR)\Filters\Extraction;..\..\..\$(VTK_DIR)\msvc\Filters\Modeling;..\..\..\$(VTK_DIR)\Filters\Modeling;..\..\..\$(VTK_DIR)\msvc\Imaging\Core;..\..\..\$(VTK_DIR)\Imaging\Core;..\..\..\$(VTK_DIR)\msvc\Imaging\Sources;..\..\..\$(VTK_DIR)\Imaging\Sources;..\..\..\$(VTK_DIR)\msvc\Interaction\Style;..\..\..\$(VTK_DIR)\Interaction\Style;..\..\..\$(VTK_DIR)\msvc\Interaction\Widgets;..\..\..\$(VTK_DIR)\Interaction\Widgets;..\..\..\$(VTK_DIR)\msvc\Filters\Sources;..\..\..\$(VTK_DIR)\Filters\Sources;..\..\..\$(VTK_DIR)\msvc\IO\Core;..\..\..\$(VTK_DIR)\IO\Core;..\..\..\$(VTK_DIR)\msvc\IO\Geometry;..\..\..\$(VTK_DIR)\IO\Geometry;..\..\..\$(VTK_DIR)\msvc\IO\Legacy;..\..\..\$(VTK_DIR)\IO\Legacy;..\..\..\$(VTK_DIR)\msvc\IO\Image;..\..\..\$(VTK_DIR)\IO\Image;..\..\..\$(VTK_DIR)\msvc\IO\PLY;..\..\..\$(VTK_DIR)\IO\PLY;..\..\..\$(VTK_DIR)\msvc\Rendering\Annotation;..\..\..\$(VTK_DIR)\Rendering\Annotation;..\..\..\$(VTK_DIR)\msvc\Rendering\LOD;..\..\..\$(VTK_DIR)\Rendering\LOD;..\..\..\$(VTK_DIR)\msvc\Views\Context2D;..\..\..\$(VTK_DIR)\Views\Context2D;..\..\..\$(VTK_DIR)\msvc\Views\Core;..\..\..\$(VTK_DIR)\Views\Core;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>boost_serialization-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_filesystem-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_date_time-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_iostreams-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_system-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;delayimp.lib;pcl_registrationd.lib;pcl_mld.lib;pcl_iod.lib;pcl_featuresd.lib;pcl_filtersd.lib;pcl_searchd.lib;pcl_kdtreed.lib;pcl_octreed.lib;flann.lib;pcl_sample_consensusd.lib;pcl_commond.lib;pcl_io_plyd.lib;delayimp.lib;vtkRenderingOpenGL2-9.0d.lib;vtkglew-9.0d.lib;opengl32.lib;vtkChartsCore-9.0d.lib;vtkIOGeometry-9.0d.lib;vtkIOPLY-9.0d.lib;vtkRenderingLOD-9.0d.lib;vtkViewsContext2D-9.0d.lib;vtkRenderingContext2D-9.0d.lib;vtkViewsCore-9.0d.lib;vtkInteractionWidgets-9.0d.lib;vtkFiltersModeling-9.0d.lib;vtkInteractionStyle-9.0d.lib;vtkFiltersExtraction-9.0d.lib;vtkIOLegacy-9.0d.lib;vtkIOCore-9.0d.lib;vtkRenderingAnnotation-9.0d.lib;vtkImagingSources-9.0d.lib;vtkIOImage-9.0d.lib;vtkImagingCore-9.0d.lib;vtkRenderingUI-9.0d.lib;vtkRenderingCore-9.0d.lib;vtkFiltersSources-9.0d.lib;vtkFiltersGeneral-9.0d.lib;vtkFiltersCore-9.0d.lib;vtkCommonExecutionModel-9.0d.lib;vtkCommonDataModel-9.0d.lib;vtkCommonTransforms-9.0d.lib;vtkCommonMisc-9.0d.lib;vtkCommonMath-9.0d.lib;vtkCommonCore-9.0d.lib;vtksys-9.0d.lib;ws2_32.lib;dbghelp.lib;psapi.lib;libpng14.lib;libusb-1.0.lib;OpenNI2.lib;nxLib64.lib;wpcap.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(FLANN_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(VTK_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(PNG_DIR)\projects\vstudio\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(LIBUSB_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(OPENNI2_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(WINCAP_DIR)\wpcap\PRJ\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(BOOST_DIR)\stage\$(Platform)\lib;$(ENSENSO_DIR)\c\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DelayLoadDLLs>VCOMP140D.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)pcl_recognitiond.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\io\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\features\include;..\..\filters\include;..\..\registration\include;..\..\sample_consensus\include;..\..\ml\include;..\..\recognition\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;$(ENSENSO_DIR)\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);$(BOOST_DIR);..\..\..\$(FLANN_DIR)\src\cpp;..\..\..\$(VTK_DIR)\msvc\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\msvc\Common\Core;..\..\..\$(VTK_DIR)\Common\Core;..\..\..\$(VTK_DIR)\msvc\Utilities\KWIML;..\..\..\$(VTK_DIR)\Utilities\KWIML;..\..\..\$(VTK_DIR)\msvc\Utilities\KWSys;..\..\..\$(VTK_DIR)\Utilities\KWSys;..\..\..\$(VTK_DIR)\msvc\Common\DataModel;..\..\..\$(VTK_DIR)\Common\DataModel;..\..\..\$(VTK_DIR)\msvc\Common\Math;..\..\..\$(VTK_DIR)\Common\Math;..\..\..\$(VTK_DIR)\msvc\Common\Transforms;..\..\..\$(VTK_DIR)\Common\Transforms;..\..\..\$(VTK_DIR)\msvc\Rendering\Core;..\..\..\$(VTK_DIR)\Rendering\Core;..\..\..\$(VTK_DIR)\msvc\Common\ExecutionModel;..\..\..\$(VTK_DIR)\Common\ExecutionModel;..\..\..\$(VTK_DIR)\msvc\Filters\Core;..\..\..\$(VTK_DIR)\Filters\Core;..\..\..\$(VTK_DIR)\msvc\Common\Misc;..\..\..\$(VTK_DIR)\Common\Misc;..\..\..\$(VTK_DIR)\msvc\Rendering\UI;..\..\..\$(VTK_DIR)\Rendering\UI;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew;..\..\..\$(VTK_DIR)\ThirdParty\glew;..\..\..\$(VTK_DIR)\msvc\Charts\Core;..\..\..\$(VTK_DIR)\Charts\Core;..\..\..\$(VTK_DIR)\msvc\Filters\General;..\..\..\$(VTK_DIR)\Filters\General;..\..\..\$(VTK_DIR)\msvc\Rendering\Context2D;..\..\..\$(VTK_DIR)\Rendering\Context2D;..\..\..\$(VTK_DIR)\msvc\Filters\Extraction;..\..\..\$(VTK_DIR)\Filters\Extraction;..\..\..\$(VTK_DIR)\msvc\Filters\Modeling;..\..\..\$(VTK_DIR)\Filters\Modeling;..\..\..\$(VTK_DIR)\msvc\Imaging\Core;..\..\..\$(VTK_DIR)\Imaging\Core;..\..\..\$(VTK_DIR)\msvc\Imaging\Sources;..\..\..\$(VTK_DIR)\Imaging\Sources;..\..\..\$(VTK_DIR)\msvc\Interaction\Style;..\..\..\$(VTK_DIR)\Interaction\Style;..\..\..\$(VTK_DIR)\msvc\Interaction\Widgets;..\..\..\$(VTK_DIR)\Interaction\Widgets;..\..\..\$(VTK_DIR)\msvc\Filters\Sources;..\..\..\$(VTK_DIR)\Filters\Sources;..\..\..\$(VTK_DIR)\msvc\IO\Core;..\..\..\$(VTK_DIR)\IO\Core;..\..\..\$(VTK_DIR)\msvc\IO\Geometry;..\..\..\$(VTK_DIR)\IO\Geometry;..\..\..\$(VTK_DIR)\msvc\IO\Legacy;..\..\..\$(VTK_DIR)\IO\Legacy;..\..\..\$(VTK_DIR)\msvc\IO\Image;..\..\..\$(VTK_DIR)\IO\Image;..\..\..\$(VTK_DIR)\msvc\IO\PLY;..\..\..\$(VTK_DIR)\IO\PLY;..\..\..\$(VTK_DIR)\msvc\Rendering\Annotation;..\..\..\$(VTK_DIR)\Rendering\Annotation;..\..\..\$(VTK_DIR)\msvc\Rendering\LOD;..\..\..\$(VTK_DIR)\Rendering\LOD;..\..\..\$(VTK_DIR)\msvc\Views\Context2D;..\..\..\$(VTK_DIR)\Views\Context2D;..\..\..\$(VTK_DIR)\msvc\Views\Core;..\..\..\$(VTK_DIR)\Views\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4800;4521;4251;4275;4305;4355</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>
+      </SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR="Release";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR=\"Release\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\io\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\features\include;..\..\filters\include;..\..\registration\include;..\..\sample_consensus\include;..\..\ml\include;..\..\recognition\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;..\..\..\$(FLANN_DIR)\src\cpp;..\..\..\$(VTK_DIR)\msvc\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\msvc\Common\Core;..\..\..\$(VTK_DIR)\Common\Core;..\..\..\$(VTK_DIR)\msvc\Utilities\KWIML;..\..\..\$(VTK_DIR)\Utilities\KWIML;..\..\..\$(VTK_DIR)\msvc\Utilities\KWSys;..\..\..\$(VTK_DIR)\Utilities\KWSys;..\..\..\$(VTK_DIR)\msvc\Common\DataModel;..\..\..\$(VTK_DIR)\Common\DataModel;..\..\..\$(VTK_DIR)\msvc\Common\Math;..\..\..\$(VTK_DIR)\Common\Math;..\..\..\$(VTK_DIR)\msvc\Common\Transforms;..\..\..\$(VTK_DIR)\Common\Transforms;..\..\..\$(VTK_DIR)\msvc\Rendering\Core;..\..\..\$(VTK_DIR)\Rendering\Core;..\..\..\$(VTK_DIR)\msvc\Common\ExecutionModel;..\..\..\$(VTK_DIR)\Common\ExecutionModel;..\..\..\$(VTK_DIR)\msvc\Filters\Core;..\..\..\$(VTK_DIR)\Filters\Core;..\..\..\$(VTK_DIR)\msvc\Common\Misc;..\..\..\$(VTK_DIR)\Common\Misc;..\..\..\$(VTK_DIR)\msvc\Rendering\UI;..\..\..\$(VTK_DIR)\Rendering\UI;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew;..\..\..\$(VTK_DIR)\ThirdParty\glew;..\..\..\$(VTK_DIR)\msvc\Charts\Core;..\..\..\$(VTK_DIR)\Charts\Core;..\..\..\$(VTK_DIR)\msvc\Filters\General;..\..\..\$(VTK_DIR)\Filters\General;..\..\..\$(VTK_DIR)\msvc\Rendering\Context2D;..\..\..\$(VTK_DIR)\Rendering\Context2D;..\..\..\$(VTK_DIR)\msvc\Filters\Extraction;..\..\..\$(VTK_DIR)\Filters\Extraction;..\..\..\$(VTK_DIR)\msvc\Filters\Modeling;..\..\..\$(VTK_DIR)\Filters\Modeling;..\..\..\$(VTK_DIR)\msvc\Imaging\Core;..\..\..\$(VTK_DIR)\Imaging\Core;..\..\..\$(VTK_DIR)\msvc\Imaging\Sources;..\..\..\$(VTK_DIR)\Imaging\Sources;..\..\..\$(VTK_DIR)\msvc\Interaction\Style;..\..\..\$(VTK_DIR)\Interaction\Style;..\..\..\$(VTK_DIR)\msvc\Interaction\Widgets;..\..\..\$(VTK_DIR)\Interaction\Widgets;..\..\..\$(VTK_DIR)\msvc\Filters\Sources;..\..\..\$(VTK_DIR)\Filters\Sources;..\..\..\$(VTK_DIR)\msvc\IO\Core;..\..\..\$(VTK_DIR)\IO\Core;..\..\..\$(VTK_DIR)\msvc\IO\Geometry;..\..\..\$(VTK_DIR)\IO\Geometry;..\..\..\$(VTK_DIR)\msvc\IO\Legacy;..\..\..\$(VTK_DIR)\IO\Legacy;..\..\..\$(VTK_DIR)\msvc\IO\Image;..\..\..\$(VTK_DIR)\IO\Image;..\..\..\$(VTK_DIR)\msvc\IO\PLY;..\..\..\$(VTK_DIR)\IO\PLY;..\..\..\$(VTK_DIR)\msvc\Rendering\Annotation;..\..\..\$(VTK_DIR)\Rendering\Annotation;..\..\..\$(VTK_DIR)\msvc\Rendering\LOD;..\..\..\$(VTK_DIR)\Rendering\LOD;..\..\..\$(VTK_DIR)\msvc\Views\Context2D;..\..\..\$(VTK_DIR)\Views\Context2D;..\..\..\$(VTK_DIR)\msvc\Views\Core;..\..\..\$(VTK_DIR)\Views\Core;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\io\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\features\include;..\..\filters\include;..\..\registration\include;..\..\sample_consensus\include;..\..\ml\include;..\..\recognition\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;..\..\..\$(FLANN_DIR)\src\cpp;..\..\..\$(VTK_DIR)\msvc\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\msvc\Common\Core;..\..\..\$(VTK_DIR)\Common\Core;..\..\..\$(VTK_DIR)\msvc\Utilities\KWIML;..\..\..\$(VTK_DIR)\Utilities\KWIML;..\..\..\$(VTK_DIR)\msvc\Utilities\KWSys;..\..\..\$(VTK_DIR)\Utilities\KWSys;..\..\..\$(VTK_DIR)\msvc\Common\DataModel;..\..\..\$(VTK_DIR)\Common\DataModel;..\..\..\$(VTK_DIR)\msvc\Common\Math;..\..\..\$(VTK_DIR)\Common\Math;..\..\..\$(VTK_DIR)\msvc\Common\Transforms;..\..\..\$(VTK_DIR)\Common\Transforms;..\..\..\$(VTK_DIR)\msvc\Rendering\Core;..\..\..\$(VTK_DIR)\Rendering\Core;..\..\..\$(VTK_DIR)\msvc\Common\ExecutionModel;..\..\..\$(VTK_DIR)\Common\ExecutionModel;..\..\..\$(VTK_DIR)\msvc\Filters\Core;..\..\..\$(VTK_DIR)\Filters\Core;..\..\..\$(VTK_DIR)\msvc\Common\Misc;..\..\..\$(VTK_DIR)\Common\Misc;..\..\..\$(VTK_DIR)\msvc\Rendering\UI;..\..\..\$(VTK_DIR)\Rendering\UI;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew;..\..\..\$(VTK_DIR)\ThirdParty\glew;..\..\..\$(VTK_DIR)\msvc\Charts\Core;..\..\..\$(VTK_DIR)\Charts\Core;..\..\..\$(VTK_DIR)\msvc\Filters\General;..\..\..\$(VTK_DIR)\Filters\General;..\..\..\$(VTK_DIR)\msvc\Rendering\Context2D;..\..\..\$(VTK_DIR)\Rendering\Context2D;..\..\..\$(VTK_DIR)\msvc\Filters\Extraction;..\..\..\$(VTK_DIR)\Filters\Extraction;..\..\..\$(VTK_DIR)\msvc\Filters\Modeling;..\..\..\$(VTK_DIR)\Filters\Modeling;..\..\..\$(VTK_DIR)\msvc\Imaging\Core;..\..\..\$(VTK_DIR)\Imaging\Core;..\..\..\$(VTK_DIR)\msvc\Imaging\Sources;..\..\..\$(VTK_DIR)\Imaging\Sources;..\..\..\$(VTK_DIR)\msvc\Interaction\Style;..\..\..\$(VTK_DIR)\Interaction\Style;..\..\..\$(VTK_DIR)\msvc\Interaction\Widgets;..\..\..\$(VTK_DIR)\Interaction\Widgets;..\..\..\$(VTK_DIR)\msvc\Filters\Sources;..\..\..\$(VTK_DIR)\Filters\Sources;..\..\..\$(VTK_DIR)\msvc\IO\Core;..\..\..\$(VTK_DIR)\IO\Core;..\..\..\$(VTK_DIR)\msvc\IO\Geometry;..\..\..\$(VTK_DIR)\IO\Geometry;..\..\..\$(VTK_DIR)\msvc\IO\Legacy;..\..\..\$(VTK_DIR)\IO\Legacy;..\..\..\$(VTK_DIR)\msvc\IO\Image;..\..\..\$(VTK_DIR)\IO\Image;..\..\..\$(VTK_DIR)\msvc\IO\PLY;..\..\..\$(VTK_DIR)\IO\PLY;..\..\..\$(VTK_DIR)\msvc\Rendering\Annotation;..\..\..\$(VTK_DIR)\Rendering\Annotation;..\..\..\$(VTK_DIR)\msvc\Rendering\LOD;..\..\..\$(VTK_DIR)\Rendering\LOD;..\..\..\$(VTK_DIR)\msvc\Views\Context2D;..\..\..\$(VTK_DIR)\Views\Context2D;..\..\..\$(VTK_DIR)\msvc\Views\Core;..\..\..\$(VTK_DIR)\Views\Core;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>boost_serialization-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_filesystem-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_date_time-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_iostreams-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_system-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;delayimp.lib;pcl_registration.lib;pcl_ml.lib;pcl_io.lib;pcl_features.lib;pcl_filters.lib;pcl_search.lib;pcl_kdtree.lib;pcl_octree.lib;flann.lib;pcl_sample_consensus.lib;pcl_common.lib;pcl_io_ply.lib;delayimp.lib;vtkRenderingOpenGL2-9.0.lib;vtkglew-9.0.lib;opengl32.lib;vtkChartsCore-9.0.lib;vtkIOGeometry-9.0.lib;vtkIOPLY-9.0.lib;vtkRenderingLOD-9.0.lib;vtkViewsContext2D-9.0.lib;vtkRenderingContext2D-9.0.lib;vtkViewsCore-9.0.lib;vtkInteractionWidgets-9.0.lib;vtkFiltersModeling-9.0.lib;vtkInteractionStyle-9.0.lib;vtkFiltersExtraction-9.0.lib;vtkIOLegacy-9.0.lib;vtkIOCore-9.0.lib;vtkRenderingAnnotation-9.0.lib;vtkImagingSources-9.0.lib;vtkIOImage-9.0.lib;vtkImagingCore-9.0.lib;vtkRenderingUI-9.0.lib;vtkRenderingCore-9.0.lib;vtkFiltersSources-9.0.lib;vtkFiltersGeneral-9.0.lib;vtkFiltersCore-9.0.lib;vtkCommonExecutionModel-9.0.lib;vtkCommonDataModel-9.0.lib;vtkCommonTransforms-9.0.lib;vtkCommonMisc-9.0.lib;vtkCommonMath-9.0.lib;vtkCommonCore-9.0.lib;vtksys-9.0.lib;ws2_32.lib;dbghelp.lib;psapi.lib;libpng14.lib;libusb-1.0.lib;OpenNI2.lib;nxLib64.lib;wpcap.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(FLANN_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(VTK_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(PNG_DIR)\projects\vstudio\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(LIBUSB_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(OPENNI2_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(WINCAP_DIR)\wpcap\PRJ\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(BOOST_DIR)\stage\$(Platform)\lib;$(ENSENSO_DIR)\c\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DelayLoadDLLs>VCOMP140.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)pcl_recognition.lib</ImportLibrary>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\io\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\features\include;..\..\filters\include;..\..\registration\include;..\..\sample_consensus\include;..\..\ml\include;..\..\recognition\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;$(ENSENSO_DIR)\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);$(BOOST_DIR);..\..\..\$(FLANN_DIR)\src\cpp;..\..\..\$(VTK_DIR)\msvc\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\msvc\Common\Core;..\..\..\$(VTK_DIR)\Common\Core;..\..\..\$(VTK_DIR)\msvc\Utilities\KWIML;..\..\..\$(VTK_DIR)\Utilities\KWIML;..\..\..\$(VTK_DIR)\msvc\Utilities\KWSys;..\..\..\$(VTK_DIR)\Utilities\KWSys;..\..\..\$(VTK_DIR)\msvc\Common\DataModel;..\..\..\$(VTK_DIR)\Common\DataModel;..\..\..\$(VTK_DIR)\msvc\Common\Math;..\..\..\$(VTK_DIR)\Common\Math;..\..\..\$(VTK_DIR)\msvc\Common\Transforms;..\..\..\$(VTK_DIR)\Common\Transforms;..\..\..\$(VTK_DIR)\msvc\Rendering\Core;..\..\..\$(VTK_DIR)\Rendering\Core;..\..\..\$(VTK_DIR)\msvc\Common\ExecutionModel;..\..\..\$(VTK_DIR)\Common\ExecutionModel;..\..\..\$(VTK_DIR)\msvc\Filters\Core;..\..\..\$(VTK_DIR)\Filters\Core;..\..\..\$(VTK_DIR)\msvc\Common\Misc;..\..\..\$(VTK_DIR)\Common\Misc;..\..\..\$(VTK_DIR)\msvc\Rendering\UI;..\..\..\$(VTK_DIR)\Rendering\UI;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew;..\..\..\$(VTK_DIR)\ThirdParty\glew;..\..\..\$(VTK_DIR)\msvc\Charts\Core;..\..\..\$(VTK_DIR)\Charts\Core;..\..\..\$(VTK_DIR)\msvc\Filters\General;..\..\..\$(VTK_DIR)\Filters\General;..\..\..\$(VTK_DIR)\msvc\Rendering\Context2D;..\..\..\$(VTK_DIR)\Rendering\Context2D;..\..\..\$(VTK_DIR)\msvc\Filters\Extraction;..\..\..\$(VTK_DIR)\Filters\Extraction;..\..\..\$(VTK_DIR)\msvc\Filters\Modeling;..\..\..\$(VTK_DIR)\Filters\Modeling;..\..\..\$(VTK_DIR)\msvc\Imaging\Core;..\..\..\$(VTK_DIR)\Imaging\Core;..\..\..\$(VTK_DIR)\msvc\Imaging\Sources;..\..\..\$(VTK_DIR)\Imaging\Sources;..\..\..\$(VTK_DIR)\msvc\Interaction\Style;..\..\..\$(VTK_DIR)\Interaction\Style;..\..\..\$(VTK_DIR)\msvc\Interaction\Widgets;..\..\..\$(VTK_DIR)\Interaction\Widgets;..\..\..\$(VTK_DIR)\msvc\Filters\Sources;..\..\..\$(VTK_DIR)\Filters\Sources;..\..\..\$(VTK_DIR)\msvc\IO\Core;..\..\..\$(VTK_DIR)\IO\Core;..\..\..\$(VTK_DIR)\msvc\IO\Geometry;..\..\..\$(VTK_DIR)\IO\Geometry;..\..\..\$(VTK_DIR)\msvc\IO\Legacy;..\..\..\$(VTK_DIR)\IO\Legacy;..\..\..\$(VTK_DIR)\msvc\IO\Image;..\..\..\$(VTK_DIR)\IO\Image;..\..\..\$(VTK_DIR)\msvc\IO\PLY;..\..\..\$(VTK_DIR)\IO\PLY;..\..\..\$(VTK_DIR)\msvc\Rendering\Annotation;..\..\..\$(VTK_DIR)\Rendering\Annotation;..\..\..\$(VTK_DIR)\msvc\Rendering\LOD;..\..\..\$(VTK_DIR)\Rendering\LOD;..\..\..\$(VTK_DIR)\msvc\Views\Context2D;..\..\..\$(VTK_DIR)\Views\Context2D;..\..\..\$(VTK_DIR)\msvc\Views\Core;..\..\..\$(VTK_DIR)\Views\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4800;4521;4251;4275;4305;4355</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>
+      </SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR="Release";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR=\"Release\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\io\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\features\include;..\..\filters\include;..\..\registration\include;..\..\sample_consensus\include;..\..\ml\include;..\..\recognition\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;..\..\..\$(FLANN_DIR)\src\cpp;..\..\..\$(VTK_DIR)\msvc\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\msvc\Common\Core;..\..\..\$(VTK_DIR)\Common\Core;..\..\..\$(VTK_DIR)\msvc\Utilities\KWIML;..\..\..\$(VTK_DIR)\Utilities\KWIML;..\..\..\$(VTK_DIR)\msvc\Utilities\KWSys;..\..\..\$(VTK_DIR)\Utilities\KWSys;..\..\..\$(VTK_DIR)\msvc\Common\DataModel;..\..\..\$(VTK_DIR)\Common\DataModel;..\..\..\$(VTK_DIR)\msvc\Common\Math;..\..\..\$(VTK_DIR)\Common\Math;..\..\..\$(VTK_DIR)\msvc\Common\Transforms;..\..\..\$(VTK_DIR)\Common\Transforms;..\..\..\$(VTK_DIR)\msvc\Rendering\Core;..\..\..\$(VTK_DIR)\Rendering\Core;..\..\..\$(VTK_DIR)\msvc\Common\ExecutionModel;..\..\..\$(VTK_DIR)\Common\ExecutionModel;..\..\..\$(VTK_DIR)\msvc\Filters\Core;..\..\..\$(VTK_DIR)\Filters\Core;..\..\..\$(VTK_DIR)\msvc\Common\Misc;..\..\..\$(VTK_DIR)\Common\Misc;..\..\..\$(VTK_DIR)\msvc\Rendering\UI;..\..\..\$(VTK_DIR)\Rendering\UI;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew;..\..\..\$(VTK_DIR)\ThirdParty\glew;..\..\..\$(VTK_DIR)\msvc\Charts\Core;..\..\..\$(VTK_DIR)\Charts\Core;..\..\..\$(VTK_DIR)\msvc\Filters\General;..\..\..\$(VTK_DIR)\Filters\General;..\..\..\$(VTK_DIR)\msvc\Rendering\Context2D;..\..\..\$(VTK_DIR)\Rendering\Context2D;..\..\..\$(VTK_DIR)\msvc\Filters\Extraction;..\..\..\$(VTK_DIR)\Filters\Extraction;..\..\..\$(VTK_DIR)\msvc\Filters\Modeling;..\..\..\$(VTK_DIR)\Filters\Modeling;..\..\..\$(VTK_DIR)\msvc\Imaging\Core;..\..\..\$(VTK_DIR)\Imaging\Core;..\..\..\$(VTK_DIR)\msvc\Imaging\Sources;..\..\..\$(VTK_DIR)\Imaging\Sources;..\..\..\$(VTK_DIR)\msvc\Interaction\Style;..\..\..\$(VTK_DIR)\Interaction\Style;..\..\..\$(VTK_DIR)\msvc\Interaction\Widgets;..\..\..\$(VTK_DIR)\Interaction\Widgets;..\..\..\$(VTK_DIR)\msvc\Filters\Sources;..\..\..\$(VTK_DIR)\Filters\Sources;..\..\..\$(VTK_DIR)\msvc\IO\Core;..\..\..\$(VTK_DIR)\IO\Core;..\..\..\$(VTK_DIR)\msvc\IO\Geometry;..\..\..\$(VTK_DIR)\IO\Geometry;..\..\..\$(VTK_DIR)\msvc\IO\Legacy;..\..\..\$(VTK_DIR)\IO\Legacy;..\..\..\$(VTK_DIR)\msvc\IO\Image;..\..\..\$(VTK_DIR)\IO\Image;..\..\..\$(VTK_DIR)\msvc\IO\PLY;..\..\..\$(VTK_DIR)\IO\PLY;..\..\..\$(VTK_DIR)\msvc\Rendering\Annotation;..\..\..\$(VTK_DIR)\Rendering\Annotation;..\..\..\$(VTK_DIR)\msvc\Rendering\LOD;..\..\..\$(VTK_DIR)\Rendering\LOD;..\..\..\$(VTK_DIR)\msvc\Views\Context2D;..\..\..\$(VTK_DIR)\Views\Context2D;..\..\..\$(VTK_DIR)\msvc\Views\Core;..\..\..\$(VTK_DIR)\Views\Core;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\io\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\features\include;..\..\filters\include;..\..\registration\include;..\..\sample_consensus\include;..\..\ml\include;..\..\recognition\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;..\..\..\$(FLANN_DIR)\src\cpp;..\..\..\$(VTK_DIR)\msvc\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\Rendering\OpenGL2;..\..\..\$(VTK_DIR)\msvc\Common\Core;..\..\..\$(VTK_DIR)\Common\Core;..\..\..\$(VTK_DIR)\msvc\Utilities\KWIML;..\..\..\$(VTK_DIR)\Utilities\KWIML;..\..\..\$(VTK_DIR)\msvc\Utilities\KWSys;..\..\..\$(VTK_DIR)\Utilities\KWSys;..\..\..\$(VTK_DIR)\msvc\Common\DataModel;..\..\..\$(VTK_DIR)\Common\DataModel;..\..\..\$(VTK_DIR)\msvc\Common\Math;..\..\..\$(VTK_DIR)\Common\Math;..\..\..\$(VTK_DIR)\msvc\Common\Transforms;..\..\..\$(VTK_DIR)\Common\Transforms;..\..\..\$(VTK_DIR)\msvc\Rendering\Core;..\..\..\$(VTK_DIR)\Rendering\Core;..\..\..\$(VTK_DIR)\msvc\Common\ExecutionModel;..\..\..\$(VTK_DIR)\Common\ExecutionModel;..\..\..\$(VTK_DIR)\msvc\Filters\Core;..\..\..\$(VTK_DIR)\Filters\Core;..\..\..\$(VTK_DIR)\msvc\Common\Misc;..\..\..\$(VTK_DIR)\Common\Misc;..\..\..\$(VTK_DIR)\msvc\Rendering\UI;..\..\..\$(VTK_DIR)\Rendering\UI;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\ThirdParty\glew\vtkglew;..\..\..\$(VTK_DIR)\msvc\ThirdParty\glew;..\..\..\$(VTK_DIR)\ThirdParty\glew;..\..\..\$(VTK_DIR)\msvc\Charts\Core;..\..\..\$(VTK_DIR)\Charts\Core;..\..\..\$(VTK_DIR)\msvc\Filters\General;..\..\..\$(VTK_DIR)\Filters\General;..\..\..\$(VTK_DIR)\msvc\Rendering\Context2D;..\..\..\$(VTK_DIR)\Rendering\Context2D;..\..\..\$(VTK_DIR)\msvc\Filters\Extraction;..\..\..\$(VTK_DIR)\Filters\Extraction;..\..\..\$(VTK_DIR)\msvc\Filters\Modeling;..\..\..\$(VTK_DIR)\Filters\Modeling;..\..\..\$(VTK_DIR)\msvc\Imaging\Core;..\..\..\$(VTK_DIR)\Imaging\Core;..\..\..\$(VTK_DIR)\msvc\Imaging\Sources;..\..\..\$(VTK_DIR)\Imaging\Sources;..\..\..\$(VTK_DIR)\msvc\Interaction\Style;..\..\..\$(VTK_DIR)\Interaction\Style;..\..\..\$(VTK_DIR)\msvc\Interaction\Widgets;..\..\..\$(VTK_DIR)\Interaction\Widgets;..\..\..\$(VTK_DIR)\msvc\Filters\Sources;..\..\..\$(VTK_DIR)\Filters\Sources;..\..\..\$(VTK_DIR)\msvc\IO\Core;..\..\..\$(VTK_DIR)\IO\Core;..\..\..\$(VTK_DIR)\msvc\IO\Geometry;..\..\..\$(VTK_DIR)\IO\Geometry;..\..\..\$(VTK_DIR)\msvc\IO\Legacy;..\..\..\$(VTK_DIR)\IO\Legacy;..\..\..\$(VTK_DIR)\msvc\IO\Image;..\..\..\$(VTK_DIR)\IO\Image;..\..\..\$(VTK_DIR)\msvc\IO\PLY;..\..\..\$(VTK_DIR)\IO\PLY;..\..\..\$(VTK_DIR)\msvc\Rendering\Annotation;..\..\..\$(VTK_DIR)\Rendering\Annotation;..\..\..\$(VTK_DIR)\msvc\Rendering\LOD;..\..\..\$(VTK_DIR)\Rendering\LOD;..\..\..\$(VTK_DIR)\msvc\Views\Context2D;..\..\..\$(VTK_DIR)\Views\Context2D;..\..\..\$(VTK_DIR)\msvc\Views\Core;..\..\..\$(VTK_DIR)\Views\Core;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>boost_serialization-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_filesystem-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_date_time-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_iostreams-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_system-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;delayimp.lib;pcl_registration.lib;pcl_ml.lib;pcl_io.lib;pcl_features.lib;pcl_filters.lib;pcl_search.lib;pcl_kdtree.lib;pcl_octree.lib;flann.lib;pcl_sample_consensus.lib;pcl_common.lib;pcl_io_ply.lib;delayimp.lib;vtkRenderingOpenGL2-9.0.lib;vtkglew-9.0.lib;opengl32.lib;vtkChartsCore-9.0.lib;vtkIOGeometry-9.0.lib;vtkIOPLY-9.0.lib;vtkRenderingLOD-9.0.lib;vtkViewsContext2D-9.0.lib;vtkRenderingContext2D-9.0.lib;vtkViewsCore-9.0.lib;vtkInteractionWidgets-9.0.lib;vtkFiltersModeling-9.0.lib;vtkInteractionStyle-9.0.lib;vtkFiltersExtraction-9.0.lib;vtkIOLegacy-9.0.lib;vtkIOCore-9.0.lib;vtkRenderingAnnotation-9.0.lib;vtkImagingSources-9.0.lib;vtkIOImage-9.0.lib;vtkImagingCore-9.0.lib;vtkRenderingUI-9.0.lib;vtkRenderingCore-9.0.lib;vtkFiltersSources-9.0.lib;vtkFiltersGeneral-9.0.lib;vtkFiltersCore-9.0.lib;vtkCommonExecutionModel-9.0.lib;vtkCommonDataModel-9.0.lib;vtkCommonTransforms-9.0.lib;vtkCommonMisc-9.0.lib;vtkCommonMath-9.0.lib;vtkCommonCore-9.0.lib;vtksys-9.0.lib;ws2_32.lib;dbghelp.lib;psapi.lib;libpng14.lib;libusb-1.0.lib;OpenNI2.lib;nxLib64.lib;wpcap.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(FLANN_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(VTK_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(PNG_DIR)\projects\vstudio\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(LIBUSB_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(OPENNI2_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(WINCAP_DIR)\wpcap\PRJ\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(BOOST_DIR)\stage\$(Platform)\lib;$(ENSENSO_DIR)\c\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DelayLoadDLLs>VCOMP140.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)pcl_recognition.lib</ImportLibrary>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\recognition\src\linemod.cpp" />
+    <ClCompile Include="..\..\recognition\src\quantizable_modality.cpp" />
+    <ClCompile Include="..\..\recognition\src\dotmod.cpp" />
+    <ClCompile Include="..\..\recognition\src\mask_map.cpp" />
+    <ClCompile Include="..\..\recognition\src\hv\occlusion_reasoning.cpp" />
+    <ClCompile Include="..\..\recognition\src\hv\hv_papazov.cpp" />
+    <ClCompile Include="..\..\recognition\src\hv\hv_go.cpp" />
+    <ClCompile Include="..\..\recognition\src\hv\greedy_verification.cpp" />
+    <ClCompile Include="..\..\recognition\src\cg\hough_3d.cpp" />
+    <ClCompile Include="..\..\recognition\src\cg\geometric_consistency.cpp" />
+    <ClCompile Include="..\..\recognition\src\ransac_based\obj_rec_ransac.cpp" />
+    <ClCompile Include="..\..\recognition\src\ransac_based\model_library.cpp" />
+    <ClCompile Include="..\..\recognition\src\ransac_based\orr_octree.cpp" />
+    <ClCompile Include="..\..\recognition\src\ransac_based\orr_octree_zprojection.cpp" />
+    <ClCompile Include="..\..\recognition\src\face_detection\face_detector_data_provider.cpp" />
+    <ClCompile Include="..\..\recognition\src\face_detection\rf_face_detector_trainer.cpp" />
+    <ClCompile Include="..\..\recognition\src\implicit_shape_model.cpp" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\boost.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\color_gradient_dot_modality.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\color_gradient_modality.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\color_modality.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\crh_alignment.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\linemod.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\dotmod.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\quantizable_modality.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\quantized_map.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\dot_modality.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\region_xy.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\mask_map.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\point_types.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\distance_map.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\dense_quantized_multi_mod_template.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\sparse_quantized_multi_mod_template.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\surface_normal_modality.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\linemod\line_rgbd.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\implicit_shape_model.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\ransac_based\auxiliary.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\ransac_based\hypothesis.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\ransac_based\model_library.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\ransac_based\rigid_transform_space.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\ransac_based\obj_rec_ransac.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\ransac_based\orr_graph.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\ransac_based\orr_octree_zprojection.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\ransac_based\trimmed_icp.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\ransac_based\orr_octree.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\ransac_based\simple_octree.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\ransac_based\voxel_structure.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\ransac_based\bvh.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\impl\linemod\line_rgbd.hpp" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\impl\ransac_based\simple_octree.hpp" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\impl\ransac_based\voxel_structure.hpp" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\impl\implicit_shape_model.hpp" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\face_detection\face_common.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\face_detection\face_detector_data_provider.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\face_detection\rf_face_detector_trainer.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\face_detection\rf_face_utils.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\hv\occlusion_reasoning.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\hv\hypotheses_verification.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\hv\hv_papazov.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\hv\hv_go.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\hv\greedy_verification.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\impl\hv\occlusion_reasoning.hpp" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\impl\hv\hv_papazov.hpp" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\impl\hv\greedy_verification.hpp" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\impl\hv\hv_go.hpp" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\cg\correspondence_grouping.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\cg\hough_3d.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\cg\geometric_consistency.h" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\impl\cg\correspondence_grouping.hpp" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\impl\cg\hough_3d.hpp" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\impl\cg\geometric_consistency.hpp" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\3rdparty\metslib\abstract-search.hh" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\3rdparty\metslib\local-search.hh" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\3rdparty\metslib\mets.hh" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\3rdparty\metslib\metslib_config.hh" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\3rdparty\metslib\model.hh" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\3rdparty\metslib\observer.hh" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\3rdparty\metslib\simulated-annealing.hh" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\3rdparty\metslib\tabu-search.hh" />
+    <ClInclude Include="..\..\recognition\include\pcl\recognition\3rdparty\metslib\termination-criteria.hh" />
+    <ResourceCompile Include="..\pcl_recognition_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\common\pcl_common.vcxproj">
+      <Project>{7C3AC9E1-AEB3-31AC-80A9-2273E41BDBDB}</Project>
+      <Name>pcl_common</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\features\pcl_features.vcxproj">
+      <Project>{D9F292B6-4653-310E-BD5A-28D3D588C5A8}</Project>
+      <Name>pcl_features</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\filters\pcl_filters.vcxproj">
+      <Project>{35DB3DFD-7BE4-3394-9E97-ACF832F6003E}</Project>
+      <Name>pcl_filters</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\io\pcl_io.vcxproj">
+      <Project>{EE0B4A90-168D-3E1A-9D9A-63E4E317E014}</Project>
+      <Name>pcl_io</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\io\pcl_io_ply.vcxproj">
+      <Project>{A8B242A5-4836-356D-9318-DA85DD3B1C5F}</Project>
+      <Name>pcl_io_ply</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\kdtree\pcl_kdtree.vcxproj">
+      <Project>{799492AB-F274-3146-BB62-1D7CF3F82770}</Project>
+      <Name>pcl_kdtree</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\ml\pcl_ml.vcxproj">
+      <Project>{D16362F4-0BD1-38DF-806F-D32751C1BDBC}</Project>
+      <Name>pcl_ml</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\octree\pcl_octree.vcxproj">
+      <Project>{C85E48F3-6BC1-3758-9FAC-A932E1E80351}</Project>
+      <Name>pcl_octree</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\registration\pcl_registration.vcxproj">
+      <Project>{4CB20E61-2F20-38CB-AFE6-6D9005F71BE1}</Project>
+      <Name>pcl_registration</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\sample_consensus\pcl_sample_consensus.vcxproj">
+      <Project>{A4BE5258-B2E3-369E-A744-6B098DFCCB50}</Project>
+      <Name>pcl_sample_consensus</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\search\pcl_search.vcxproj">
+      <Project>{9C5E69C5-1AE4-32C1-8BE5-6E1B48F5C5A5}</Project>
+      <Name>pcl_search</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

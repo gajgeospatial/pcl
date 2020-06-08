@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D9F292B6-4653-310E-BD5A-28D3D588C5A8}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>pcl_features</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pcl_featuresd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">pcl_featuresd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pcl_features</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">pcl_features</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\filters\include;..\..\2d\include;..\..\features\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;$(ENSENSO_DIR)\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);$(BOOST_DIR);..\..\..\$(FLANN_DIR)\src\cpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4521;4251;4275;4305;4355</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>
+      </SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR="Debug";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR=\"Debug\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\filters\include;..\..\2d\include;..\..\features\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;..\..\..\$(FLANN_DIR)\src\cpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\filters\include;..\..\2d\include;..\..\features\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;..\..\..\$(FLANN_DIR)\src\cpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>boost_serialization-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_filesystem-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_date_time-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_iostreams-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_system-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;delayimp.lib;pcl_filtersd.lib;pcl_searchd.lib;pcl_kdtreed.lib;flann.lib;pcl_octreed.lib;pcl_sample_consensusd.lib;pcl_commond.lib;delayimp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(FLANN_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(BOOST_DIR)\stage\$(Platform)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DelayLoadDLLs>VCOMP140D.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)pcl_featuresd.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\filters\include;..\..\2d\include;..\..\features\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;$(ENSENSO_DIR)\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);$(BOOST_DIR);..\..\..\$(FLANN_DIR)\src\cpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4800;4521;4251;4275;4305;4355</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>
+      </SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR="Debug";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR=\"Debug\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\filters\include;..\..\2d\include;..\..\features\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;..\..\..\$(FLANN_DIR)\src\cpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\filters\include;..\..\2d\include;..\..\features\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;..\..\..\$(FLANN_DIR)\src\cpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>boost_serialization-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_filesystem-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_date_time-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_iostreams-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;boost_system-vc$(PlatformToolsetVersion)-mt-gd-$(BOOST_VER).lib;delayimp.lib;pcl_filtersd.lib;pcl_searchd.lib;pcl_kdtreed.lib;flann.lib;pcl_octreed.lib;pcl_sample_consensusd.lib;pcl_commond.lib;delayimp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(FLANN_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(BOOST_DIR)\stage\$(Platform)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DelayLoadDLLs>VCOMP140D.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)pcl_featuresd.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\filters\include;..\..\2d\include;..\..\features\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;$(ENSENSO_DIR)\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);$(BOOST_DIR);..\..\..\$(FLANN_DIR)\src\cpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4800;4521;4251;4275;4305;4355</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>
+      </SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR="Release";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR=\"Release\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\filters\include;..\..\2d\include;..\..\features\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;..\..\..\$(FLANN_DIR)\src\cpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\filters\include;..\..\2d\include;..\..\features\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;..\..\..\$(FLANN_DIR)\src\cpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>boost_serialization-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_filesystem-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_date_time-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_iostreams-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_system-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;delayimp.lib;pcl_filters.lib;pcl_search.lib;pcl_kdtree.lib;flann.lib;pcl_octree.lib;pcl_sample_consensus.lib;pcl_common.lib;delayimp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(FLANN_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(BOOST_DIR)\stage\$(Platform)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DelayLoadDLLs>VCOMP140.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)pcl_features.lib</ImportLibrary>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\filters\include;..\..\2d\include;..\..\features\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;$(ENSENSO_DIR)\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);$(BOOST_DIR);..\..\..\$(FLANN_DIR)\src\cpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4800;4521;4251;4275;4305;4355</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>
+      </SuppressStartupBanner>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR="Release";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX;PCL_ONLY_CORE_POINT_TYPES;__SSSE3__;__SSE2__;__SSE__;_ENABLE_EXTENDED_ALIGNED_STORAGE;CMAKE_INTDIR=\"Release\";PCLAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\filters\include;..\..\2d\include;..\..\features\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;..\..\..\$(FLANN_DIR)\src\cpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\include;..\..\common\include;..\..\search\include;..\..\kdtree\include;..\..\octree\include;..\..\filters\include;..\..\2d\include;..\..\features\include;..\..\..\$(EIGEN3_DIR);..\..\..\$(LIBUSB_DIR)\libusb;..\..\..\$(OPENNI2_DIR)\Source\Core;..\..\..\..\..\Program Files\Ensenso\development\c\include;..\..\recognition\include\pcl\recognition\3rdparty;..\..\..\$(PNG_DIR);..\..\..\..\3rd_Party\boost_1_67_0\boost;..\..\..\$(FLANN_DIR)\src\cpp;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>boost_serialization-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_filesystem-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_date_time-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_iostreams-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;boost_system-vc$(PlatformToolsetVersion)-mt-$(BOOST_VER).lib;delayimp.lib;pcl_filters.lib;pcl_search.lib;pcl_kdtree.lib;flann.lib;pcl_octree.lib;pcl_sample_consensus.lib;pcl_common.lib;delayimp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);..\..\..\$(FLANN_DIR)\msvc\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(BOOST_DIR)\stage\$(Platform)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DelayLoadDLLs>VCOMP140.dll</DelayLoadDLLs>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)pcl_features.lib</ImportLibrary>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\features\src\board.cpp" />
+    <ClCompile Include="..\..\features\src\flare.cpp" />
+    <ClCompile Include="..\..\features\src\brisk_2d.cpp" />
+    <ClCompile Include="..\..\features\src\boundary.cpp" />
+    <ClCompile Include="..\..\features\src\cppf.cpp" />
+    <ClCompile Include="..\..\features\src\cvfh.cpp" />
+    <ClCompile Include="..\..\features\src\our_cvfh.cpp" />
+    <ClCompile Include="..\..\features\src\crh.cpp" />
+    <ClCompile Include="..\..\features\src\don.cpp" />
+    <ClCompile Include="..\..\features\src\fpfh.cpp" />
+    <ClCompile Include="..\..\features\src\from_meshes.cpp" />
+    <ClCompile Include="..\..\features\src\gasd.cpp" />
+    <ClCompile Include="..\..\features\src\gfpfh.cpp" />
+    <ClCompile Include="..\..\features\src\integral_image_normal.cpp" />
+    <ClCompile Include="..\..\features\src\intensity_gradient.cpp" />
+    <ClCompile Include="..\..\features\src\intensity_spin.cpp" />
+    <ClCompile Include="..\..\features\src\linear_least_squares_normal.cpp" />
+    <ClCompile Include="..\..\features\src\moment_invariants.cpp" />
+    <ClCompile Include="..\..\features\src\moment_of_inertia_estimation.cpp" />
+    <ClCompile Include="..\..\features\src\multiscale_feature_persistence.cpp" />
+    <ClCompile Include="..\..\features\src\narf.cpp" />
+    <ClCompile Include="..\..\features\src\normal_3d.cpp" />
+    <ClCompile Include="..\..\features\src\normal_based_signature.cpp" />
+    <ClCompile Include="..\..\features\src\organized_edge_detection.cpp" />
+    <ClCompile Include="..\..\features\src\pfh.cpp" />
+    <ClCompile Include="..\..\features\src\ppf.cpp" />
+    <ClCompile Include="..\..\features\src\shot.cpp" />
+    <ClCompile Include="..\..\features\src\shot_lrf.cpp" />
+    <ClCompile Include="..\..\features\src\spin_image.cpp" />
+    <ClCompile Include="..\..\features\src\principal_curvatures.cpp" />
+    <ClCompile Include="..\..\features\src\rift.cpp" />
+    <ClCompile Include="..\..\features\src\rops_estimation.cpp" />
+    <ClCompile Include="..\..\features\src\rsd.cpp" />
+    <ClCompile Include="..\..\features\src\grsd.cpp" />
+    <ClCompile Include="..\..\features\src\statistical_multiscale_interest_region_extraction.cpp" />
+    <ClCompile Include="..\..\features\src\vfh.cpp" />
+    <ClCompile Include="..\..\features\src\esf.cpp" />
+    <ClCompile Include="..\..\features\src\3dsc.cpp" />
+    <ClCompile Include="..\..\features\src\usc.cpp" />
+    <ClCompile Include="..\..\features\src\range_image_border_extractor.cpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\boost.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\eigen.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\board.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\flare.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\brisk_2d.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\cppf.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\cvfh.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\our_cvfh.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\crh.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\don.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\feature.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\fpfh.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\fpfh_omp.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\from_meshes.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\gasd.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\gfpfh.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\integral_image2D.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\integral_image_normal.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\intensity_gradient.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\intensity_spin.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\linear_least_squares_normal.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\moment_invariants.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\moment_of_inertia_estimation.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\multiscale_feature_persistence.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\narf.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\narf_descriptor.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\normal_3d.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\normal_3d_omp.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\normal_based_signature.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\organized_edge_detection.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\pfh.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\pfh_tools.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\pfhrgb.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\ppf.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\ppfrgb.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\shot.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\shot_lrf.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\shot_lrf_omp.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\shot_omp.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\spin_image.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\principal_curvatures.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\rift.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\rops_estimation.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\rsd.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\grsd.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\statistical_multiscale_interest_region_extraction.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\vfh.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\esf.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\3dsc.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\usc.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\boundary.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\range_image_border_extractor.h" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\board.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\flare.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\brisk_2d.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\cppf.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\cvfh.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\our_cvfh.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\crh.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\don.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\feature.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\fpfh.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\fpfh_omp.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\gasd.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\gfpfh.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\integral_image2D.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\integral_image_normal.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\intensity_gradient.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\intensity_spin.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\linear_least_squares_normal.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\moment_invariants.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\moment_of_inertia_estimation.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\multiscale_feature_persistence.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\narf.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\normal_3d.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\normal_3d_omp.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\normal_based_signature.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\organized_edge_detection.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\pfh.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\pfhrgb.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\ppf.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\ppfrgb.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\shot.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\shot_lrf.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\shot_lrf_omp.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\shot_omp.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\spin_image.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\principal_curvatures.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\rift.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\rops_estimation.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\rsd.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\grsd.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\statistical_multiscale_interest_region_extraction.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\vfh.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\esf.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\3dsc.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\usc.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\boundary.hpp" />
+    <ClInclude Include="..\..\features\include\pcl\features\impl\range_image_border_extractor.hpp" />
+    <ResourceCompile Include="..\pcl_features_version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\common\pcl_common.vcxproj">
+      <Project>{7C3AC9E1-AEB3-31AC-80A9-2273E41BDBDB}</Project>
+      <Name>pcl_common</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\filters\pcl_filters.vcxproj">
+      <Project>{35DB3DFD-7BE4-3394-9E97-ACF832F6003E}</Project>
+      <Name>pcl_filters</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\kdtree\pcl_kdtree.vcxproj">
+      <Project>{799492AB-F274-3146-BB62-1D7CF3F82770}</Project>
+      <Name>pcl_kdtree</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\octree\pcl_octree.vcxproj">
+      <Project>{C85E48F3-6BC1-3758-9FAC-A932E1E80351}</Project>
+      <Name>pcl_octree</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\sample_consensus\pcl_sample_consensus.vcxproj">
+      <Project>{A4BE5258-B2E3-369E-A744-6B098DFCCB50}</Project>
+      <Name>pcl_sample_consensus</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\search\pcl_search.vcxproj">
+      <Project>{9C5E69C5-1AE4-32C1-8BE5-6E1B48F5C5A5}</Project>
+      <Name>pcl_search</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

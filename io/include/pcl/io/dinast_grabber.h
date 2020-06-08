@@ -44,7 +44,7 @@
 #include <pcl/io/grabber.h>
 #include <pcl/common/time.h>
 #include <pcl/console/print.h>
-#include <libusb-1.0/libusb.h>
+#include <libusb/libusb.h>
 #include <boost/circular_buffer.hpp>
 
 #include <mutex>

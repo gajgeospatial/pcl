@@ -48,6 +48,7 @@
 #include <vtkPolyData.h>
 #include <vtkPointData.h>
 #include <vtkFloatArray.h>
+#include <vtkUnsignedCharArray.h>
 
 // Support for VTK 7.1 upwards
 #ifdef vtkGenericDataArray_h
@@ -104,7 +105,6 @@ pcl::VTKUtils::vtk2mesh (const vtkSmartPointer<vtkPolyData>& poly_data, pcl::Pol
   vtkUnsignedCharArray* poly_colors = nullptr;
   if (poly_data->GetPointData() != nullptr)
     poly_colors = vtkUnsignedCharArray::SafeDownCast (poly_data->GetPointData ()->GetScalars ("Colors"));
-
   // Some applications do not save the name of scalars (including PCL's native vtk_io)
   if (!poly_colors)
     poly_colors = vtkUnsignedCharArray::SafeDownCast (poly_data->GetPointData ()->GetScalars ("scalars"));
@@ -154,7 +154,7 @@ pcl::VTKUtils::vtk2mesh (const vtkSmartPointer<vtkPolyData>& poly_data, pcl::Pol
   }
 
   mesh.polygons.resize (nr_polygons);
-  vtkIdType* cell_points;
+  const vtkIdType* cell_points;
   vtkIdType nr_cell_points;
   vtkCellArray * mesh_polygons = poly_data->GetPolys ();
   mesh_polygons->InitTraversal ();
@@ -239,7 +239,11 @@ pcl::VTKUtils::mesh2vtk (const pcl::PolygonMesh& mesh, vtkSmartPointer<vtkPolyDa
     {
       memcpy (&rgb, &mesh.cloud.data[cp * mesh.cloud.point_step + offset], sizeof (pcl::RGB));
       const unsigned char color[3] = {rgb.r, rgb.g, rgb.b};
+#if VTK_MAJOR_VERSION < 7
       colors->InsertNextTupleValue (color);
+#else
+	  colors->InsertNextTypedTuple(color);
+#endif
     }
     poly_data->GetPointData ()->SetScalars (colors);
   }

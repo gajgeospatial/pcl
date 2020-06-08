@@ -6,7 +6,8 @@ if(POLICY CMP0074)
   # 2. Remove search paths with *_ROOT since they will be automatically checked
   cmake_policy(SET CMP0074 NEW)
 endif()
-
+message("CMakeVersion " ${CMAKE_VERSION})
+set(CMAKE_VERBOSE_MAKEFILE ON)
 # Set target C++ standard and required compiler features
 set(CMAKE_CXX_STANDARD 14 CACHE STRING "The target C++ standard. PCL requires C++14 or higher.")
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -368,81 +369,83 @@ endif()
 
 # Find VTK
 option(WITH_VTK "Build VTK-Visualizations" TRUE)
-if(WITH_VTK AND NOT ANDROID)
-  set(PCL_VTK_COMPONENTS
-    vtkChartsCore
-    vtkCommonCore
-    vtkCommonDataModel
-    vtkCommonExecutionModel
-    vtkFiltersCore
-    vtkFiltersExtraction
-    vtkFiltersModeling
-    vtkImagingCore
-    vtkImagingSources
-    vtkInteractionStyle
-    vtkInteractionWidgets
-    vtkIOCore
-    vtkIOGeometry
-    vtkIOImage
-    vtkIOLegacy
-    vtkIOPLY
-    vtkRenderingAnnotation
-    vtkRenderingLOD
-    vtkViewsContext2D
-  )
-  find_package(VTK COMPONENTS ${PCL_VTK_COMPONENTS})
-  if(VTK_FOUND AND ("${VTK_VERSION}" VERSION_LESS 6.2))
-    message(WARNING "The minimum required version of VTK is 6.2, but found ${VTK_VERSION}")
-    set(VTK_FOUND FALSE)
-  endif()
+include("${PCL_SOURCE_DIR}/cmake/pcl_DetectVTK.cmake")
+if(NOT VTK_FOUND)
+	if(WITH_VTK AND NOT ANDROID)
+	  set(PCL_VTK_COMPONENTS
+		vtkChartsCore
+		vtkCommonCore
+		vtkCommonDataModel
+		vtkCommonExecutionModel
+		vtkFiltersCore
+		vtkFiltersExtraction
+		vtkFiltersModeling
+		vtkImagingCore
+		vtkImagingSources
+		vtkInteractionStyle
+		vtkInteractionWidgets
+		vtkIOCore
+		vtkIOGeometry
+		vtkIOImage
+		vtkIOLegacy
+		vtkIOPLY
+		vtkRenderingAnnotation
+		vtkRenderingLOD
+		vtkViewsContext2D
+	  )
+	  find_package(VTK COMPONENTS ${PCL_VTK_COMPONENTS})
+	  if(VTK_FOUND AND ("${VTK_VERSION}" VERSION_LESS 6.2))
+		message(WARNING "The minimum required version of VTK is 6.2, but found ${VTK_VERSION}")
+		set(VTK_FOUND FALSE)
+	  endif()
 
-  if(VTK_FOUND)
-    if(NOT DEFINED VTK_RENDERING_BACKEND)
-      # On old VTK versions this variable does not exist. In this case it is
-      # safe to assume OpenGL backend
-      set(VTK_RENDERING_BACKEND "OpenGL")
-    endif()
-    list(APPEND PCL_VTK_COMPONENTS vtkRenderingContext${VTK_RENDERING_BACKEND})
+	  if(VTK_FOUND)
+		if(NOT DEFINED VTK_RENDERING_BACKEND)
+		  # On old VTK versions this variable does not exist. In this case it is
+		  # safe to assume OpenGL backend
+		  set(VTK_RENDERING_BACKEND "OpenGL")
+		endif()
+		list(APPEND PCL_VTK_COMPONENTS vtkRenderingContext${VTK_RENDERING_BACKEND})
 
-    if(WITH_QT)
-      if(";${VTK_MODULES_ENABLED};" MATCHES ";vtkGUISupportQt;" AND ";${VTK_MODULES_ENABLED};" MATCHES ";vtkRenderingQt;")
-        set(QVTK_FOUND ON)
-        list(APPEND PCL_VTK_COMPONENTS vtkRenderingQt vtkGUISupportQt)
-      else()
-        unset(QVTK_FOUND)
-      endif()
-    endif()
+		if(WITH_QT)
+		  if(";${VTK_MODULES_ENABLED};" MATCHES ";vtkGUISupportQt;" AND ";${VTK_MODULES_ENABLED};" MATCHES ";vtkRenderingQt;")
+			set(QVTK_FOUND ON)
+			list(APPEND PCL_VTK_COMPONENTS vtkRenderingQt vtkGUISupportQt)
+		  else()
+			unset(QVTK_FOUND)
+		  endif()
+		endif()
 
-    find_package(VTK COMPONENTS ${PCL_VTK_COMPONENTS})
+		find_package(VTK COMPONENTS ${PCL_VTK_COMPONENTS})
 
-    message(STATUS "VTK_MAJOR_VERSION ${VTK_MAJOR_VERSION}, rendering backend: ${VTK_RENDERING_BACKEND}")
-    if(PCL_SHARED_LIBS OR (NOT (PCL_SHARED_LIBS) AND NOT (VTK_BUILD_SHARED_LIBS)))
-      if(VTK_USE_FILE)
-        include(${VTK_USE_FILE})
-      endif()
-      message(STATUS "VTK found (include: ${VTK_INCLUDE_DIRS}, libs: ${VTK_LIBRARIES}")
-      if(APPLE)
-        option(VTK_USE_COCOA "Use Cocoa for VTK render windows" ON)
-        mark_as_advanced(VTK_USE_COCOA)
-      endif()
-      if(${VTK_RENDERING_BACKEND} STREQUAL "OpenGL")
-        set(VTK_RENDERING_BACKEND_OPENGL_VERSION "1")
-        message(DEPRECATION "The rendering backend OpenGL is deprecated and not available anymore since VTK 8.2."
-                            "Please switch to the OpenGL2 backend instead, which is available since VTK 6.2."
-                            "Support of the deprecated backend will be dropped with PCL 1.13.")
-      elseif(${VTK_RENDERING_BACKEND} STREQUAL "OpenGL2")
-        set(VTK_RENDERING_BACKEND_OPENGL_VERSION "2")
-      endif()
-    else()
-      set(VTK_FOUND OFF)
-      message("Warning: You are to build PCL in STATIC but VTK is SHARED!")
-      message("Warning: VTK disabled!")
-    endif()
-  endif()
-else()
-  set(VTK_FOUND OFF)
+		message(STATUS "VTK_MAJOR_VERSION ${VTK_MAJOR_VERSION}, rendering backend: ${VTK_RENDERING_BACKEND}")
+		if(PCL_SHARED_LIBS OR (NOT (PCL_SHARED_LIBS) AND NOT (VTK_BUILD_SHARED_LIBS)))
+		  if(VTK_USE_FILE)
+			include(${VTK_USE_FILE})
+		  endif()
+		  message(STATUS "VTK found (include: ${VTK_INCLUDE_DIRS}, libs: ${VTK_LIBRARIES}")
+		  if(APPLE)
+			option(VTK_USE_COCOA "Use Cocoa for VTK render windows" ON)
+			mark_as_advanced(VTK_USE_COCOA)
+		  endif()
+		  if(${VTK_RENDERING_BACKEND} STREQUAL "OpenGL")
+			set(VTK_RENDERING_BACKEND_OPENGL_VERSION "1")
+			message(DEPRECATION "The rendering backend OpenGL is deprecated and not available anymore since VTK 8.2."
+								"Please switch to the OpenGL2 backend instead, which is available since VTK 6.2."
+								"Support of the deprecated backend will be dropped with PCL 1.13.")
+		  elseif(${VTK_RENDERING_BACKEND} STREQUAL "OpenGL2")
+			set(VTK_RENDERING_BACKEND_OPENGL_VERSION "2")
+		  endif()
+		else()
+		  set(VTK_FOUND OFF)
+		  message("Warning: You are to build PCL in STATIC but VTK is SHARED!")
+		  message("Warning: VTK disabled!")
+		endif()
+	  endif()
+	else()
+	  set(VTK_FOUND OFF)
+	endif()
 endif()
-
 
 #Find PCAP
 option(WITH_PCAP "pcap file capabilities in Velodyne HDL driver" TRUE)

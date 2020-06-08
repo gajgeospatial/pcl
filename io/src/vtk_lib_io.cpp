@@ -343,12 +343,12 @@ pcl::io::vtk2mesh (const vtkSmartPointer<vtkPolyData>& poly_data, pcl::PolygonMe
 
   // Now handle the polygons
   mesh.polygons.resize (nr_polygons);
-  vtkIdType* cell_points;
+  const vtkIdType* cell_points;
   vtkIdType nr_cell_points;
   vtkCellArray * mesh_polygons = poly_data->GetPolys ();
   mesh_polygons->InitTraversal ();
   int id_poly = 0;
-  while (mesh_polygons->GetNextCell (nr_cell_points, cell_points))
+  while (mesh_polygons->GetNextCell (nr_cell_points,  cell_points))
   {
     mesh.polygons[id_poly].vertices.resize (nr_cell_points);
     for (vtkIdType i = 0; i < nr_cell_points; ++i)
